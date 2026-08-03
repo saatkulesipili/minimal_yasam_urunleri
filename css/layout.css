@@ -1,0 +1,360 @@
+/* =====================================================================
+   layout.css  —  HEADER / NAVBAR / HERO / FOOTER
+   =====================================================================
+   Bu dosyada öğreneceklerin:
+   1) DISPLAY (block, inline-block, flex, grid, none)
+   2) POSITION (static, relative, absolute, fixed, sticky)
+   3) FLEXBOX  (display:flex + justify-content / align-items / gap)
+   4) GRID     (display:grid + grid-template-columns)
+   5) FLOAT (kısaca, tarihi bir teknik olarak — modern kod flex/grid kullanır)
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   ÜST BİLGİ ŞERİDİ (topbar) — kampanya / iletişim bilgisi
+   FLEXBOX ile sağa-sola dağıtılmış iki grup içerik
+--------------------------------------------------------------------- */
+.topbar {
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-size: 0.85rem;
+}
+.topbar .topbar-inner {
+  display: flex;                 /* FLEX konteyner */
+  justify-content: space-between; /* içerikleri iki uca yasla */
+  align-items: center;            /* dikeyde ortala */
+  gap: var(--space-2);
+  padding: 0.5rem 0;
+  flex-wrap: wrap;                /* dar ekranda alt satıra düşsün */
+}
+.topbar-info { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.topbar-info span { display: flex; align-items: center; gap: 0.35rem; }
+.topbar-social { display: flex; gap: 0.9rem; }
+.topbar-social a { color: var(--color-white); font-size: 0.95rem; }
+.topbar-social a:hover { color: var(--color-brass); }
+
+/* ---------------------------------------------------------------------
+   HEADER / NAVBAR
+   position: sticky -> sayfa kaydırılınca üstte "yapışıp" kalır.
+   sticky, relative ile fixed arasında bir davranış sergiler.
+--------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* içerik kaydırılırken her zaman en üstte kalsın */
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-atolye {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 1rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-dark);
+}
+.brand span { color: var(--color-accent); }
+
+/* Ana menü linkleri — flex ile yan yana */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  list-style: none; /* ul'ün varsayılan noktalarını kaldır */
+}
+.nav-links > li > a {
+  color: var(--color-text);
+  font-weight: 500;
+  position: relative; /* alt çizgi efekti için referans nokta */
+  padding: 0.4rem 0.1rem;
+}
+/* Alt çizgi hover efekti: ::after (pseudo-element) ile "hayali" bir eleman ekliyoruz */
+.nav-links > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width var(--transition-fast);
+}
+.nav-links > li > a:hover::after { width: 100%; }
+
+/* --- DROPDOWN MENÜ --- */
+.nav-item-dropdown { position: relative; } /* absolute konumlanan menü için referans */
+.dropdown-toggle { display: flex; align-items: center; gap: 0.3rem; cursor: pointer; background:none; border:none; font: inherit; color: var(--color-text); font-weight:500; }
+.dropdown-menu {
+  position: absolute;   /* .nav-item-dropdown'a göre konumlanır */
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 0.5rem;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all var(--transition-fast);
+  z-index: 1001;
+}
+.nav-item-dropdown.open .dropdown-menu,
+.nav-item-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius);
+  color: var(--color-text);
+}
+.dropdown-menu li a:hover { background: var(--color-bg-alt); color: var(--color-accent); }
+
+/* --- ARAMA KUTUSU --- */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.4rem 0.5rem 0.4rem 1rem;
+  flex: 1;
+  max-width: 340px;
+  background: var(--color-white);
+}
+.navbar-search input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-family: var(--font-body);
+  background: transparent;
+}
+.navbar-search button {
+  border: none;
+  background: var(--color-dark);
+  color: var(--color-white);
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex; align-items:center; justify-content:center;
+  transition: background var(--transition-fast);
+}
+.navbar-search button:hover { background: var(--color-accent); }
+
+/* --- Navbar sağ ikonlar (favoriler / sepet) --- */
+.navbar-actions { display: flex; align-items: center; gap: var(--space-2); }
+.icon-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--color-bg-alt);
+  color: var(--color-dark);
+  font-size: 1.1rem;
+}
+.icon-btn:hover { background: var(--color-accent); color: var(--color-white); }
+.icon-badge {
+  position: absolute;
+  top: -4px; right: -4px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Mobil menü açma butonu (hamburger) — sadece küçük ekranlarda görünür (bkz. responsive.css) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-dark);
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------------------
+   HERO (Header/Karşılama Alanı)
+   GRID kullanarak sol taraf metin / sağ taraf görsel iki kolon yapıyoruz
+--------------------------------------------------------------------- */
+.hero {
+  background: linear-gradient(120deg, var(--color-dark) 55%, var(--color-dark-2) 100%);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* GRID: 2 kolon, oranlı genişlik */
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5) 0;
+  min-height: 70vh;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+  margin-bottom: var(--space-2);
+}
+.hero h1 { color: var(--color-white); margin-bottom: var(--space-2); }
+.hero p.lead {
+  color: rgba(255,255,255,0.78);
+  font-size: 1.1rem;
+  max-width: 34rem;
+  margin-bottom: var(--space-3);
+}
+.hero-cta { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-4); }
+
+/* İstatistik alanı — flex ile eşit dağıtılmış sayaçlar */
+.hero-stats {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: var(--space-3);
+}
+.hero-stats .stat-num {
+  font-family: var(--font-mono);
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem);
+  font-weight: 700;
+  color: var(--color-brass);
+  display: block;
+}
+.hero-stats .stat-label {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+}
+
+.hero-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.hero-media img {
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  /* object-fit ürün görsel oranını bozmadan kutuya sığdırır */
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+/* Görselin üstünde yüzen küçük "rozet" kart — absolute positioning */
+.hero-floating-badge {
+  position: absolute;
+  bottom: -18px;
+  left: -18px;
+  background: var(--color-white);
+  color: var(--color-dark);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* ---------------------------------------------------------------------
+   FOOTER — Çok kolonlu, GRID tabanlı
+--------------------------------------------------------------------- */
+.site-footer {
+  background: var(--color-dark);
+  color: rgba(255,255,255,0.75);
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr; /* 4 kolon: marka / linkler / kurumsal / bülten */
+  gap: var(--space-4);
+  padding: var(--space-5) 0 var(--space-4);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-col h4 {
+  color: var(--color-white);
+  font-size: 1rem;
+  margin-bottom: var(--space-2);
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.6rem; }
+.footer-col ul li a { color: rgba(255,255,255,0.7); }
+.footer-col ul li a:hover { color: var(--color-brass); }
+
+.footer-brand p { color: rgba(255,255,255,0.65); margin: var(--space-2) 0; max-width: 26rem; }
+.footer-social { display: flex; gap: 0.75rem; }
+.footer-social a {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-white);
+  transition: all var(--transition-fast);
+}
+.footer-social a:hover { background: var(--color-accent); border-color: var(--color-accent); transform: translateY(-3px); }
+
+.newsletter-form { display: flex; gap: 0.5rem; margin-top: var(--space-2); }
+.newsletter-form input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.06);
+  color: var(--color-white);
+}
+.newsletter-form input::placeholder { color: rgba(255,255,255,0.5); }
+.newsletter-form button {
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--color-accent);
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: 600;
+}
+.newsletter-form button:hover { background: var(--color-brass); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) 0;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+.footer-bottom .payment-icons { display: flex; gap: 0.6rem; font-size: 1.3rem; }
+
+/* ---------------------------------------------------------------------
+   FLOAT — kısaca gösterim (modern projede grid/flex tercih edilir)
+   Eski yöntemle bir görseli yazının soluna "yüzdürme" örneği
+--------------------------------------------------------------------- */
+.float-example img {
+  float: left;             /* eleman soldan yüzer, diğer içerik sağından akar */
+  width: 140px;
+  margin: 0 var(--space-2) var(--space-2) 0;
+  border-radius: var(--radius);
+}
+.float-example::after {   /* clearfix: float sonrası konteynerin çökmesini önler */
+  content: "";
+  display: table;
+  clear: both;
+}

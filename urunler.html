@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ATÖLYE ürün kataloğu: seramik, ahşap, tekstil ve mum kategorilerinde el yapımı ürünler.">
+  <title>ATÖLYE | Tüm Ürünler</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-info">
+        <span><i class="bi bi-telephone"></i> 0850 123 45 67</span>
+        <span><i class="bi bi-truck"></i> 500₺ üzeri kargo bedava</span>
+      </div>
+      <div class="topbar-social">
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container navbar-atolye">
+      <a href="index.html" class="brand">🪵 ATÖLYE<span>.</span></a>
+      <nav aria-label="Ana menü">
+        <ul class="nav-links" id="anaMenu">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li class="nav-item-dropdown">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Kategoriler <i class="bi bi-chevron-down"></i></button>
+            <ul class="dropdown-menu">
+              <li><a href="urunler.html?kategori=seramik">Seramik</a></li>
+              <li><a href="urunler.html?kategori=ahsap">Ahşap Ürünler</a></li>
+              <li><a href="urunler.html?kategori=tekstil">Tekstil &amp; Dokuma</a></li>
+              <li><a href="urunler.html?kategori=mum">El Yapımı Mumlar</a></li>
+            </ul>
+          </li>
+          <li><a href="urunler.html" aria-current="page">Ürünler</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <form class="navbar-search" role="search">
+        <label for="navSearch" class="visually-hidden">Ürün ara</label>
+        <input type="search" id="navSearch" placeholder="Ürün, kategori veya usta ara...">
+        <button type="submit" aria-label="Ara"><i class="bi bi-search"></i></button>
+      </form>
+      <div class="navbar-actions">
+        <a href="#" class="icon-btn" aria-label="Favorilerim"><i class="bi bi-heart"></i></a>
+        <a href="sepet.html" class="icon-btn" aria-label="Sepetim">
+          <i class="bi bi-bag"></i>
+          <span class="icon-badge" data-cart-count>0</span>
+        </a>
+      </div>
+      <button class="nav-toggle" aria-controls="anaMenu" aria-expanded="false" aria-label="Menüyü aç/kapat"><i class="bi bi-list"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- SAYFA BAŞLIĞI / breadcrumb -->
+    <section style="background:var(--color-bg-alt); padding: var(--space-3) 0;">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ürünler</li>
+          </ol>
+        </nav>
+        <h1 style="font-size:1.8rem;">Tüm Ürünler</h1>
+      </div>
+    </section>
+
+    <section class="container container-section">
+      <div class="row g-4">
+
+        <!-- ================= FİLTRE FORMU (SIDEBAR) ================= -->
+        <aside class="col-lg-3">
+          <form class="form-atolye" aria-label="Ürün filtreleri">
+            <h3 style="font-size:1.05rem; margin-bottom:1rem;">Filtrele</h3>
+
+            <!-- CHECKBOX (çoklu seçim) -->
+            <div class="field">
+              <label>Kategori</label>
+              <div class="check-row">
+                <input type="checkbox" id="catSeramik" name="kategori" value="seramik" checked>
+                <label for="catSeramik" style="margin:0; font-weight:400;">Seramik (24)</label>
+              </div>
+              <div class="check-row">
+                <input type="checkbox" id="catAhsap" name="kategori" value="ahsap">
+                <label for="catAhsap" style="margin:0; font-weight:400;">Ahşap (18)</label>
+              </div>
+              <div class="check-row">
+                <input type="checkbox" id="catTekstil" name="kategori" value="tekstil">
+                <label for="catTekstil" style="margin:0; font-weight:400;">Tekstil (15)</label>
+              </div>
+              <div class="check-row">
+                <input type="checkbox" id="catMum" name="kategori" value="mum">
+                <label for="catMum" style="margin:0; font-weight:400;">Mum (12)</label>
+              </div>
+            </div>
+
+            <!-- RADIO BUTTON (tek seçim) -->
+            <div class="field">
+              <label>Stok Durumu</label>
+              <div class="radio-row">
+                <input type="radio" id="stokHepsi" name="stok" value="hepsi" checked>
+                <label for="stokHepsi" style="margin:0; font-weight:400;">Hepsi</label>
+              </div>
+              <div class="radio-row">
+                <input type="radio" id="stokVar" name="stok" value="var">
+                <label for="stokVar" style="margin:0; font-weight:400;">Sadece Stokta Olanlar</label>
+              </div>
+            </div>
+
+            <!-- RANGE (fiyat aralığı) -->
+            <div class="field">
+              <label for="fiyatRange">Maksimum Fiyat: <output id="fiyatDeger">1000₺</output></label>
+              <input type="range" id="fiyatRange" min="50" max="2000" step="50" value="1000"
+                     oninput="document.getElementById('fiyatDeger').textContent = this.value + '₺'">
+            </div>
+
+            <!-- SELECT (açılır liste) -->
+            <div class="field">
+              <label for="siralaSelect">Sırala</label>
+              <select id="siralaSelect">
+                <option value="onerilen">Önerilen</option>
+                <option value="ucuz">Fiyat: Düşükten Yükseğe</option>
+                <option value="pahali">Fiyat: Yüksekten Düşüğe</option>
+                <option value="yeni">En Yeniler</option>
+                <option value="puan">En Yüksek Puan</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-atolye" style="width:100%;">
+              <i class="bi bi-funnel"></i> Filtrele
+            </button>
+          </form>
+        </aside>
+
+        <!-- ================= ÜRÜN LİSTESİ ================= -->
+        <div class="col-lg-9">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <p class="text-muted mb-0">69 üründen 1-8 arası gösteriliyor</p>
+          </div>
+
+          <div class="product-grid">
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-badge">-%20</span>
+                <button class="product-wishlist" aria-label="Favorilere ekle"><i class="bi bi-heart"></i></button>
+                <a href="urun-detay.html"><img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&q=80" alt="Toprak tonu kase seti"></a>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Seramik</span>
+                <h3 class="product-title"><a href="urun-detay.html" style="color:inherit;">Toprak Tonu Kase Seti</a></h3>
+                <div class="product-specs"><span>Ø 18 cm</span><span class="stock-badge in-stock"><i class="bi bi-check-circle-fill"></i> Stokta</span></div>
+                <div class="product-rating">★★★★★ <span>(128)</span></div>
+                <div class="product-footer">
+                  <span class="product-price"><span class="old-price">450₺</span>360₺</span>
+                  <button class="btn-add-cart" data-add-to-cart data-id="urun-001" data-name="Toprak Tonu Kase Seti" data-price="360" data-category="Seramik" data-image="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&q=80" aria-label="Sepete ekle"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-badge badge-new">Yeni</span>
+                <button class="product-wishlist" aria-label="Favorilere ekle"><i class="bi bi-heart"></i></button>
+                <a href="urun-detay.html"><img src="https://images.unsplash.com/photo-1611486212557-88be5ff6f941?w=500&q=80" alt="Ceviz ağacı kesme tahtası"></a>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Ahşap</span>
+                <h3 class="product-title"><a href="urun-detay.html" style="color:inherit;">Ceviz Ağacı Kesme Tahtası</a></h3>
+                <div class="product-specs"><span>40x25 cm</span><span class="stock-badge in-stock"><i class="bi bi-check-circle-fill"></i> Stokta</span></div>
+                <div class="product-rating">★★★★★ <span>(64)</span></div>
+                <div class="product-footer">
+                  <span class="product-price">590₺</span>
+                  <button class="btn-add-cart" data-add-to-cart data-id="urun-002" data-name="Ceviz Ağacı Kesme Tahtası" data-price="590" data-category="Ahşap" data-image="https://images.unsplash.com/photo-1611486212557-88be5ff6f941?w=500&q=80" aria-label="Sepete ekle"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <button class="product-wishlist" aria-label="Favorilere ekle"><i class="bi bi-heart"></i></button>
+                <a href="urun-detay.html"><img src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=500&q=80" alt="El dokuma yastık kılıfı"></a>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Tekstil</span>
+                <h3 class="product-title"><a href="urun-detay.html" style="color:inherit;">El Dokuma Yastık Kılıfı</a></h3>
+                <div class="product-specs"><span>45x45 cm</span><span class="stock-badge low-stock"><i class="bi bi-exclamation-circle-fill"></i> Son 3 adet</span></div>
+                <div class="product-rating">★★★★☆ <span>(41)</span></div>
+                <div class="product-footer">
+                  <span class="product-price">275₺</span>
+                  <button class="btn-add-cart" data-add-to-cart data-id="urun-003" data-name="El Dokuma Yastık Kılıfı" data-price="275" data-category="Tekstil" data-image="https://images.unsplash.com/photo-1600166898405-da9535204843?w=500&q=80" aria-label="Sepete ekle"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-badge">Tükeniyor</span>
+                <button class="product-wishlist" aria-label="Favorilere ekle"><i class="bi bi-heart"></i></button>
+                <a href="urun-detay.html"><img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500&q=80" alt="Lavanta soya mumu"></a>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Mum</span>
+                <h3 class="product-title"><a href="urun-detay.html" style="color:inherit;">Lavanta Soya Mumu</a></h3>
+                <div class="product-specs"><span>220 gr</span><span class="stock-badge low-stock"><i class="bi bi-exclamation-circle-fill"></i> Son 5 adet</span></div>
+                <div class="product-rating">★★★★★ <span>(203)</span></div>
+                <div class="product-footer">
+                  <span class="product-price">145₺</span>
+                  <button class="btn-add-cart" data-add-to-cart data-id="urun-004" data-name="Lavanta Soya Mumu" data-price="145" data-category="Mum" data-image="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500&q=80" aria-label="Sepete ekle"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <button class="product-wishlist" aria-label="Favorilere ekle"><i class="bi bi-heart"></i></button>
+                <a href="urun-detay.html"><img src="https://images.unsplash.com/photo-1591129841117-3adfd313e34f?w=500&q=80" alt="Seramik vazo"></a>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Seramik</span>
+                <h3 class="product-title"><a href="urun-detay.html" style="color:inherit;">El Boyaması Vazo</a></h3>
+                <div class="product-specs"><span>25 cm</span><span class="stock-badge in-stock"><i class="bi bi-check-circle-fill"></i> Stokta</span></div>
+                <div class="product-rating">★★★★★ <span>(87)</span></div>
+                <div class="product-footer">
+                  <span class="product-price">410₺</span>
+                  <button class="btn-add-cart" data-add-to-cart data-id="urun-005" data-name="El Boyaması Vazo" data-price="410" data-category="Seramik" data-image="https://images.unsplash.com/photo-1591129841117-3adfd313e34f?w=500&q=80" aria-label="Sepete ekle"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <button class="product-wishlist" aria-label="Favorilere ekle"><i class="bi bi-heart"></i></button>
+                <a href="urun-detay.html"><img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=500&q=80" alt="Ahşap servis tepsisi"></a>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Ahşap</span>
+                <h3 class="product-title"><a href="urun-detay.html" style="color:inherit;">Meşe Servis Tepsisi</a></h3>
+                <div class="product-specs"><span>50x30 cm</span><span class="stock-badge in-stock"><i class="bi bi-check-circle-fill"></i> Stokta</span></div>
+                <div class="product-rating">★★★★☆ <span>(52)</span></div>
+                <div class="product-footer">
+                  <span class="product-price">520₺</span>
+                  <button class="btn-add-cart" data-add-to-cart data-id="urun-006" data-name="Meşe Servis Tepsisi" data-price="520" data-category="Ahşap" data-image="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=500&q=80" aria-label="Sepete ekle"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- PAGINATION (Bootstrap) -->
+          <nav aria-label="Sayfalama" class="mt-4">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled"><a class="page-link" href="#">Önceki</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Sonraki</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="brand" style="color:var(--color-white)">🪵 ATÖLYE<span>.</span></a>
+        <p>El yapımı seramik, ahşap ve tekstil ürünlerini Anadolu'nun ustalarından evinize taşıyoruz.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Alışveriş</h4>
+        <ul>
+          <li><a href="urunler.html">Tüm Ürünler</a></li>
+          <li><a href="sepet.html">Sepetim</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kurumsal</h4>
+        <ul>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Bülten</h4>
+        <form class="newsletter-form">
+          <label for="footerNewsletter" class="visually-hidden">E-posta</label>
+          <input type="email" id="footerNewsletter" placeholder="E-posta adresin" required>
+          <button type="submit"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 ATÖLYE Eğitim Projesi — Tüm hakları saklıdır.</p>
+      <div class="payment-icons"><i class="bi bi-credit-card"></i><i class="bi bi-paypal"></i></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Sayfa başına dön"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* =====================================================================
+   responsive.css  —  MEDIA QUERY / RESPONSIVE TASARIM
+   =====================================================================
+   KURAL: "Mobile First" değil burada "Desktop First" yaklaşımı kullandık
+   (max-width ile büyükten küçüğe iniyoruz). İkisi de geçerlidir;
+   önemli olan tutarlı olmaktır.
+
+   Kırılım noktalarımız (breakpoints):
+   1200px -> büyük masaüstü
+   992px  -> tablet (yatay) / küçük laptop
+   768px  -> tablet (dikey)
+   576px  -> mobil telefon
+   ===================================================================== */
+
+/* ---------- 1200px ve altı: geniş ekran ince ayar ---------- */
+@media (max-width: 1200px) {
+  .category-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- 992px ve altı: tablet ---------- */
+@media (max-width: 992px) {
+  .hero-inner {
+    grid-template-columns: 1fr; /* 2 kolon yerine tek kolon */
+    text-align: center;
+    min-height: auto;
+    padding: var(--space-4) 0;
+  }
+  .hero-cta, .hero-stats { justify-content: center; }
+  .hero-media { order: -1; margin-bottom: var(--space-3); } /* görsel üste geçsin */
+  .hero-floating-badge { display: none; }
+
+  .footer-top { grid-template-columns: 1fr 1fr; }
+
+  .navbar-search { display: none; } /* dar ekranda arama kutusunu gizle, mobilde ayrı satırda gösterilebilir */
+
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
+  .form-grid-2 { grid-template-columns: 1fr; }
+}
+
+/* ---------- 768px ve altı: mobil menüye geçiş ---------- */
+@media (max-width: 768px) {
+  .nav-toggle { display: block; } /* hamburger butonunu göster */
+
+  .nav-links {
+    display: none;              /* JS ile .open class'ı eklenince flex olacak */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-2);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
+  }
+  .nav-links.open { display: flex; }
+  .nav-item-dropdown .dropdown-menu { position: static; box-shadow:none; border:none; opacity:1; visibility:visible; transform:none; display:none; }
+  .nav-item-dropdown.open .dropdown-menu { display: block; }
+
+  .topbar-info span:nth-child(2) { display: none; } /* ikinci bilgiyi mobilde gizle, yer kazan */
+
+  .product-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .cart-table thead { display: none; } /* mobilde tablo başlıklarını gizleyip kart görünümüne yaklaşıyoruz */
+  .cart-table td { display: block; width: 100%; }
+}
+
+/* ---------- 576px ve altı: küçük telefonlar ---------- */
+@media (max-width: 576px) {
+  .footer-top { grid-template-columns: 1fr; text-align: left; }
+  .category-grid { grid-template-columns: 1fr 1fr; }
+  .hero-stats { gap: var(--space-2); }
+  .newsletter-form { flex-direction: column; }
+  .form-grid-2 { grid-template-columns: 1fr; }
+}
+
+/* ---------- Erişilebilirlik: hareket azaltmayı tercih edenler ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

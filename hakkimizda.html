@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ATÖLYE'nin hikayesi - 2016'dan bugüne Anadolu ustalarını dijital dünya ile buluşturuyoruz.">
+  <title>Hakkımızda | ATÖLYE</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container navbar-atolye">
+      <a href="index.html" class="brand">🪵 ATÖLYE<span>.</span></a>
+      <nav aria-label="Ana menü">
+        <ul class="nav-links" id="anaMenu">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="urunler.html">Ürünler</a></li>
+          <li><a href="hakkimizda.html" aria-current="page">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <form class="navbar-search" role="search">
+        <label for="navSearch" class="visually-hidden">Ürün ara</label>
+        <input type="search" id="navSearch" placeholder="Ürün ara...">
+        <button type="submit" aria-label="Ara"><i class="bi bi-search"></i></button>
+      </form>
+      <div class="navbar-actions">
+        <a href="#" class="icon-btn" aria-label="Favorilerim"><i class="bi bi-heart"></i></a>
+        <a href="sepet.html" class="icon-btn" aria-label="Sepetim"><i class="bi bi-bag"></i><span class="icon-badge" data-cart-count>0</span></a>
+      </div>
+      <button class="nav-toggle" aria-controls="anaMenu" aria-expanded="false" aria-label="Menüyü aç/kapat"><i class="bi bi-list"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HAKKIMIZDA HERO -->
+    <section class="hero" aria-label="Hakkımızda giriş">
+      <div class="container" style="padding: var(--space-4) 0; text-align:center;">
+        <span class="hero-eyebrow" style="justify-content:center;"><i class="bi bi-heart"></i> Hikayemiz</span>
+        <h1 style="color:#fff;">2016'dan Bugüne, El Emeğiyle</h1>
+        <p class="lead" style="margin:0 auto;">ATÖLYE, unutulmaya yüz tutan zanaatları dijital dünyayla buluşturmak için kuruldu.</p>
+      </div>
+    </section>
+
+    <!-- HİKAYE + SES KAYDI (audio) -->
+    <section class="container container-section">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <span class="eyebrow">Kurucumuzdan</span>
+          <h2>"Her Parçanın Bir Ustası Var"</h2>
+          <p class="text-muted">
+            ATÖLYE'yi kurma fikri, büyükannemin çeyiz sandığındaki el işi bir örtüyü
+            fark ettiğim gün doğdu. O günden bu yana amacımız değişmedi: Anadolu'nun
+            farklı köşelerindeki ustaların emeğini, adil bir gelirle buluşturmak.
+          </p>
+          <p class="text-muted">Kurucumuzun kısa sesli mesajını dinlemek ister misin?</p>
+
+          <!-- AUDIO ETİKETİ -->
+          <audio controls style="width:100%; margin-top: .5rem;">
+            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+            Tarayıcınız audio etiketini desteklemiyor.
+          </audio>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1493934558415-9d19f0b2b4d2?w=700&q=80" alt="Atölyede çalışan usta" style="border-radius:12px; width:100%; aspect-ratio:4/3; object-fit:cover;">
+        </div>
+      </div>
+    </section>
+
+    <!-- ZAMAN ÇİZELGESİ (ordered list kullanımı - sıralı bilgi) -->
+    <section class="container container-section" style="background:var(--color-bg-alt); border-radius:12px;">
+      <div class="section-title">
+        <span class="eyebrow">Yolculuğumuz</span>
+        <h2>Kilometre Taşlarımız</h2>
+      </div>
+      <ol style="max-width:640px; margin:0 auto; list-style:none; padding:0; counter-reset:zaman;">
+        <li style="display:flex; gap:1rem; margin-bottom:1.5rem; counter-increment:zaman;">
+          <strong style="font-family:var(--font-mono); color:var(--color-accent); min-width:60px;">2016</strong>
+          <span>İlk atölye ziyaretleri ve 5 usta ile başlayan küçük bir pazar günü denemesi.</span>
+        </li>
+        <li style="display:flex; gap:1rem; margin-bottom:1.5rem;">
+          <strong style="font-family:var(--font-mono); color:var(--color-accent); min-width:60px;">2019</strong>
+          <span>İlk online mağazamızı açtık, 30 ustaya ulaştık.</span>
+        </li>
+        <li style="display:flex; gap:1rem; margin-bottom:1.5rem;">
+          <strong style="font-family:var(--font-mono); color:var(--color-accent); min-width:60px;">2022</strong>
+          <span>8.000'den fazla siparişi güvenle müşterilerimize ulaştırdık.</span>
+        </li>
+        <li style="display:flex; gap:1rem;">
+          <strong style="font-family:var(--font-mono); color:var(--color-accent); min-width:60px;">2026</strong>
+          <span>120'den fazla ustayla Türkiye'nin dört bir yanına ulaşıyoruz.</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- EKİP (unordered list + kart) -->
+    <section class="container container-section">
+      <div class="section-title">
+        <span class="eyebrow">Ekibimiz</span>
+        <h2>Bu Hikayeyi Yazanlar</h2>
+      </div>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&q=80" alt="Kurucu ortak" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 1rem;">
+          <h3 style="font-size:1.1rem;">Ayşe Yıldız</h3>
+          <p class="text-muted" style="font-size:.9rem;">Kurucu Ortak</p>
+        </div>
+        <div class="col-md-4">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80" alt="Ürün direktörü" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 1rem;">
+          <h3 style="font-size:1.1rem;">Deniz Kaya</h3>
+          <p class="text-muted" style="font-size:.9rem;">Ürün Direktörü</p>
+        </div>
+        <div class="col-md-4">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&q=80" alt="Usta ilişkileri" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 1rem;">
+          <h3 style="font-size:1.1rem;">Can Öztürk</h3>
+          <p class="text-muted" style="font-size:.9rem;">Usta İlişkileri</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="brand" style="color:var(--color-white)">🪵 ATÖLYE<span>.</span></a>
+        <p>El yapımı seramik, ahşap ve tekstil ürünlerini Anadolu'nun ustalarından evinize taşıyoruz.</p>
+      </div>
+      <div class="footer-col"><h4>Alışveriş</h4><ul><li><a href="urunler.html">Tüm Ürünler</a></li><li><a href="sepet.html">Sepetim</a></li></ul></div>
+      <div class="footer-col"><h4>Kurumsal</h4><ul><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div class="footer-col">
+        <h4>Bülten</h4>
+        <form class="newsletter-form">
+          <label for="footerNewsletter" class="visually-hidden">E-posta</label>
+          <input type="email" id="footerNewsletter" placeholder="E-posta adresin" required>
+          <button type="submit"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 ATÖLYE Eğitim Projesi — Tüm hakları saklıdır.</p>
+      <div class="payment-icons"><i class="bi bi-credit-card"></i><i class="bi bi-paypal"></i></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Sayfa başına dön"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

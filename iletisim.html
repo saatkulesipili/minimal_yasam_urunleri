@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ATÖLYE ile iletişime geçin - sorularınız, siparişleriniz ve işbirlikleri için bize ulaşın.">
+  <title>İletişim | ATÖLYE</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container navbar-atolye">
+      <a href="index.html" class="brand">🪵 ATÖLYE<span>.</span></a>
+      <nav aria-label="Ana menü">
+        <ul class="nav-links" id="anaMenu">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="urunler.html">Ürünler</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html" aria-current="page">İletişim</a></li>
+        </ul>
+      </nav>
+      <form class="navbar-search" role="search">
+        <label for="navSearch" class="visually-hidden">Ürün ara</label>
+        <input type="search" id="navSearch" placeholder="Ürün ara...">
+        <button type="submit" aria-label="Ara"><i class="bi bi-search"></i></button>
+      </form>
+      <div class="navbar-actions">
+        <a href="#" class="icon-btn" aria-label="Favorilerim"><i class="bi bi-heart"></i></a>
+        <a href="sepet.html" class="icon-btn" aria-label="Sepetim"><i class="bi bi-bag"></i><span class="icon-badge" data-cart-count>0</span></a>
+      </div>
+      <button class="nav-toggle" aria-controls="anaMenu" aria-expanded="false" aria-label="Menüyü aç/kapat"><i class="bi bi-list"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <section style="background:var(--color-dark); color:#fff; padding: var(--space-4) 0;">
+      <div class="container text-center">
+        <h1 style="color:#fff;">Bize Ulaşın</h1>
+        <p style="color:rgba(255,255,255,.75);">Sorularınız mı var? Aşağıdaki formu doldurun, en kısa sürede dönüş yapalım.</p>
+      </div>
+    </section>
+
+    <section class="container container-section">
+      <div class="row g-5">
+
+        <!-- ================= İLETİŞİM FORMU (TÜM INPUT TİPLERİ) ================= -->
+        <div class="col-lg-7">
+          <h2 style="font-size:1.4rem; margin-bottom:1.25rem;">Mesaj Gönder</h2>
+
+          <form class="form-atolye" action="#" method="post">
+            <div class="form-grid-2">
+              <!-- text -->
+              <div class="field">
+                <label for="adSoyad">Ad Soyad *</label>
+                <input type="text" id="adSoyad" name="adSoyad" placeholder="Adınız Soyadınız" required minlength="3">
+              </div>
+              <!-- email -->
+              <div class="field">
+                <label for="email">E-posta *</label>
+                <input type="email" id="email" name="email" placeholder="ornek@eposta.com" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <!-- tel -->
+              <div class="field">
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" placeholder="05XX XXX XX XX" pattern="[0-9\s]{10,13}">
+              </div>
+              <!-- date -->
+              <div class="field">
+                <label for="teslimTarihi">Tercih Edilen Teslim Tarihi</label>
+                <input type="date" id="teslimTarihi" name="teslimTarihi">
+              </div>
+            </div>
+
+            <!-- select -->
+            <div class="field">
+              <label for="konu">Konu</label>
+              <select id="konu" name="konu" required>
+                <option value="">Bir konu seçin</option>
+                <option value="siparis">Sipariş Durumu</option>
+                <option value="iade">İade / Değişim</option>
+                <option value="toptan">Toptan Satış</option>
+                <option value="isbirligi">Usta İşbirliği</option>
+                <option value="diger">Diğer</option>
+              </select>
+            </div>
+
+            <!-- range -->
+            <div class="field">
+              <label for="butceRange">Yaklaşık Bütçeniz: <output id="butceDeger">500₺</output></label>
+              <input type="range" id="butceRange" name="butce" min="0" max="5000" step="100" value="500"
+                     oninput="document.getElementById('butceDeger').textContent = this.value + '₺'">
+            </div>
+
+            <!-- radio -->
+            <div class="field">
+              <label>Nasıl İletişime Geçelim?</label>
+              <div class="radio-row">
+                <input type="radio" id="iletisimEposta" name="iletisimTercih" value="eposta" checked>
+                <label for="iletisimEposta" style="margin:0;font-weight:400;">E-posta ile</label>
+              </div>
+              <div class="radio-row">
+                <input type="radio" id="iletisimTelefon" name="iletisimTercih" value="telefon">
+                <label for="iletisimTelefon" style="margin:0;font-weight:400;">Telefon ile</label>
+              </div>
+            </div>
+
+            <!-- textarea -->
+            <div class="field">
+              <label for="mesaj">Mesajınız *</label>
+              <textarea id="mesaj" name="mesaj" placeholder="Mesajınızı buraya yazın..." required></textarea>
+            </div>
+
+            <!-- file -->
+            <div class="field">
+              <label for="dosya">Referans Görsel Ekle (opsiyonel)</label>
+              <input type="file" id="dosya" name="dosya" accept="image/*">
+            </div>
+
+            <!-- color -->
+            <div class="field">
+              <label for="renkTercih">Tercih Ettiğiniz Renk Tonu</label>
+              <input type="color" id="renkTercih" name="renkTercih" value="#b5651d" style="height:44px; padding:.25rem;">
+            </div>
+
+            <!-- checkbox -->
+            <div class="field">
+              <div class="check-row">
+                <input type="checkbox" id="kvkk" name="kvkk" required>
+                <label for="kvkk" style="margin:0; font-weight:400;">KVKK Aydınlatma Metni'ni okudum, kabul ediyorum. *</label>
+              </div>
+              <div class="check-row">
+                <input type="checkbox" id="bulten" name="bulten">
+                <label for="bulten" style="margin:0; font-weight:400;">Kampanyalardan haberdar olmak istiyorum.</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-atolye"><i class="bi bi-send"></i> Mesajı Gönder</button>
+          </form>
+        </div>
+
+        <!-- ================= İLETİŞİM BİLGİLERİ + HARİTA (IFRAME) ================= -->
+        <div class="col-lg-5">
+          <h2 style="font-size:1.4rem; margin-bottom:1.25rem;">İletişim Bilgileri</h2>
+
+          <ul style="list-style:none; padding:0;">
+            <li class="d-flex gap-3 mb-3">
+              <i class="bi bi-geo-alt" style="font-size:1.3rem;color:var(--color-accent);"></i>
+              <span>Atölye Sokak No:12, Kütahya / Türkiye</span>
+            </li>
+            <li class="d-flex gap-3 mb-3">
+              <i class="bi bi-telephone" style="font-size:1.3rem;color:var(--color-accent);"></i>
+              <span>0850 123 45 67</span>
+            </li>
+            <li class="d-flex gap-3 mb-3">
+              <i class="bi bi-envelope" style="font-size:1.3rem;color:var(--color-accent);"></i>
+              <span>destek@atolye-egitim.test</span>
+            </li>
+            <li class="d-flex gap-3 mb-3">
+              <i class="bi bi-clock" style="font-size:1.3rem;color:var(--color-accent);"></i>
+              <span>Hafta içi 09:00 - 18:00</span>
+            </li>
+          </ul>
+
+          <!-- IFRAME: harita gömme (embed) — src bir haritayı bu kutu içinde gösterir -->
+          <div style="border-radius:12px; overflow:hidden; box-shadow:var(--shadow-card);">
+            <iframe
+              title="Atölye konum haritası"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=29.98%2C39.41%2C29.99%2C39.42&layer=mapnik"
+              width="100%" height="300" style="border:0;" loading="lazy">
+            </iframe>
+          </div>
+
+          <div class="footer-social mt-3">
+            <a href="#" aria-label="Instagram" style="color:var(--color-dark); border-color:var(--color-border);"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook" style="color:var(--color-dark); border-color:var(--color-border);"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Youtube" style="color:var(--color-dark); border-color:var(--color-border);"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="brand" style="color:var(--color-white)">🪵 ATÖLYE<span>.</span></a>
+        <p>El yapımı seramik, ahşap ve tekstil ürünlerini Anadolu'nun ustalarından evinize taşıyoruz.</p>
+      </div>
+      <div class="footer-col"><h4>Alışveriş</h4><ul><li><a href="urunler.html">Tüm Ürünler</a></li><li><a href="sepet.html">Sepetim</a></li></ul></div>
+      <div class="footer-col"><h4>Kurumsal</h4><ul><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div class="footer-col">
+        <h4>Bülten</h4>
+        <form class="newsletter-form">
+          <label for="footerNewsletter" class="visually-hidden">E-posta</label>
+          <input type="email" id="footerNewsletter" placeholder="E-posta adresin" required>
+          <button type="submit"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 ATÖLYE Eğitim Projesi — Tüm hakları saklıdır.</p>
+      <div class="payment-icons"><i class="bi bi-credit-card"></i><i class="bi bi-paypal"></i></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Sayfa başına dön"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

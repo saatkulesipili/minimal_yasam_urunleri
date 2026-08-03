@@ -1,0 +1,210 @@
+/* =====================================================================
+   ATÖLYE E-TİCARET PROJESİ  —  style.css (TEMEL DOSYA)
+   =====================================================================
+   Bu dosyada öğreneceklerin:
+   1) CSS SELECTORS  (element, class, id, pseudo-class, pseudo-element)
+   2) CSS VARIABLES  (:root içinde --degisken-adi)
+   3) BOX MODEL      (margin / border / padding / width / height)
+   4) clamp()        (responsive yazı boyutları için tek satır çözüm)
+   5) overflow, z-index
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   1) CSS VARIABLES (Değişkenler)
+   :root, HTML dokümanının en tepesindeki "sanal" elementtir.
+   Burada tanımlanan --degisken tüm sayfada tekrar tekrar kullanılabilir.
+   Neden kullanırız?  Marka rengini TEK bir yerden değiştirebilmek için.
+--------------------------------------------------------------------- */
+:root {
+  /* -- Renk Paleti (Atölye / El Yapımı Ürün teması) -- */
+  --color-bg: #fbf9f6;              /* sayfa arkaplanı: sıcak kırık beyaz */
+  --color-bg-alt: #f1ede5;          /* alternatif açık zemin (kartlar) */
+  --color-dark: #1f2a24;            /* koyu zeytin-yeşili: header/footer */
+  --color-dark-2: #2c3a32;          /* dark'ın biraz açığı (hover vs.) */
+  --color-accent: #b5651d;          /* bakır/kavrulmuş turuncu: CTA, linkler */
+  --color-accent-light: #e2a06b;    /* accent'in açık tonu (hover) */
+  --color-brass: #c9a227;           /* pirinç/sarı: yıldız, rozet, indirim etiketi */
+  --color-text: #2b2b28;            /* ana yazı rengi */
+  --color-text-muted: #6b6a63;      /* ikincil / açıklama yazıları */
+  --color-white: #ffffff;
+  --color-border: #e3ddd0;
+
+  /* -- Tipografi -- */
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;  /* başlıklar */
+  --font-body: "Inter", "Segoe UI", sans-serif;             /* gövde metni */
+  --font-mono: "JetBrains Mono", "Consolas", monospace;     /* ürün etiketleri, fiyat, ölçüler */
+
+  /* -- Boşluk / Spacing ölçeği (8px tabanlı) -- */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+
+  /* -- Diğer -- */
+  --radius: 4px;
+  --shadow-card: 0 6px 18px rgba(31, 42, 36, 0.08);
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.45s ease;
+}
+
+/* ---------------------------------------------------------------------
+   2) RESET / TEMEL AYARLAR
+   Tarayıcıların kendi varsayılan margin/padding değerlerini sıfırlarız.
+   * (universal selector) => "sayfadaki HER elementi seç"
+--------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* border ve padding, width'in İÇİNE dahil olur */
+}
+
+html {
+  scroll-behavior: smooth; /* # linklere tıklayınca yumuşak kaydırma */
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  /* overflow-x: hidden -> yatay taşan animasyon/elementleri gizler */
+  overflow-x: hidden;
+}
+
+/* ELEMENT SELECTOR örneği: tüm h1-h4 başlıkları */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--color-dark);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* clamp(min, tercih-edilen, max) => ekran boyutuna göre otomatik
+   büyüyüp küçülen, ama sınırları aşmayan yazı boyutu.
+   Medya query yazmadan responsive tipografi! */
+h1 { font-size: clamp(2rem, 4vw + 1rem, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem); }
+h3 { font-size: clamp(1.15rem, 1.5vw + 1rem, 1.75rem); }
+
+p  { color: var(--color-text); }
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast); /* renk değişimini yumuşat */
+}
+a:hover { color: var(--color-accent-light); } /* PSEUDO-CLASS: :hover */
+
+img { max-width: 100%; display: block; }
+
+/* ---------------------------------------------------------------------
+   3) YARDIMCI (utility) SINIFLAR — Box Model pratiği
+--------------------------------------------------------------------- */
+.container-section {
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-5);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.section-title .eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent); /* BORDER */
+  padding: 0.25rem 0.75rem;              /* PADDING (iç boşluk) */
+  border-radius: 999px;
+  margin-bottom: var(--space-2);         /* MARGIN (dış boşluk) */
+}
+
+.section-title p {
+  color: var(--color-text-muted);
+  max-width: 40rem;
+  margin: 0.5rem auto 0; /* üst-sağ/sol-alt kısayolu: ortalamak için auto */
+}
+
+.btn-atolye {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;   /* height yerine padding ile "yükseklik" veriyoruz */
+  border: 2px solid var(--color-dark);
+  border-radius: var(--radius);
+  background: var(--color-dark);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+.btn-atolye:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-2px); /* TRANSFORM: hafif yukarı kalkma efekti */
+}
+
+.btn-outline-atolye {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border: 2px solid var(--color-white);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-white);
+  transition: all var(--transition-fast);
+}
+.btn-outline-atolye:hover {
+  background: var(--color-white);
+  color: var(--color-dark);
+}
+
+/* Z-INDEX örneği: yukarı çık butonu her zaman en üstte dursun istiyoruz.
+   z-index sadece position:static OLMAYAN elementlerde çalışır! */
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all var(--transition-fast);
+  z-index: 999; /* header (z-index:1000'den az) hariç her şeyin üstünde */
+  box-shadow: var(--shadow-card);
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover { background: var(--color-dark); }
+
+/* Odaklanma (klavye ile gezinme) için görünür focus çizgisi - erişilebilirlik */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid var(--color-brass);
+  outline-offset: 2px;
+}
+
+/* Genel görünmez yardımcı (screen-reader only) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
