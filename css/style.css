@@ -62,7 +62,11 @@
 html {
   scroll-behavior: smooth; /* # linklere tıklayınca yumuşak kaydırma */
 }
-
+.topbar {
+    background: black;
+    color: white;
+    padding: 10px;
+}
 body {
   font-family: var(--font-body);
   color: var(--color-text);
@@ -208,3 +212,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   clip: rect(0,0,0,0);
   white-space: nowrap;
 }
+
+
