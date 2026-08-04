@@ -64,11 +64,37 @@ html {
 }
 
 /*! ekleme */
+
+/*? topbar start */
 .topbar {
     background: var(--color-dark);
     color: var(--color-white);
     padding: 10px;
 }
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.topbar-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.topbar-info i {
+    margin-right: var(--space-1);
+}
+
+.topbar-social {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/*? topbar end */
 
 body {
   font-family: var(--font-body);
