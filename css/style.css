@@ -34,7 +34,7 @@
   --font-body: "Inter", "Segoe UI", sans-serif;             /* gövde metni */
   --font-mono: "JetBrains Mono", "Consolas", monospace;     /* ürün etiketleri, fiyat, ölçüler */
 
-  /* -- Boşluk / Spacing ölçeği (8px tabanlı) -- */
+  /* -- Boşluk / Spacing ölçeği (8px tabanlı) -- */ /*? 1rem = 16px */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -62,11 +62,14 @@
 html {
   scroll-behavior: smooth; /* # linklere tıklayınca yumuşak kaydırma */
 }
+
+/*! ekleme */
 .topbar {
     background: black;
     color: white;
     padding: 10px;
 }
+
 body {
   font-family: var(--font-body);
   color: var(--color-text);
