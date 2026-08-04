@@ -17,17 +17,17 @@
 --------------------------------------------------------------------- */
 :root {
   /* -- Renk Paleti (Atölye / El Yapımı Ürün teması) -- */
-  --color-bg: #fbf9f6;              /* sayfa arkaplanı: sıcak kırık beyaz */
-  --color-bg-alt: #f1ede5;          /* alternatif açık zemin (kartlar) */
-  --color-dark: #1f2a24;            /* koyu zeytin-yeşili: header/footer */
-  --color-dark-2: #2c3a32;          /* dark'ın biraz açığı (hover vs.) */
-  --color-accent: #b5651d;          /* bakır/kavrulmuş turuncu: CTA, linkler */
-  --color-accent-light: #e2a06b;    /* accent'in açık tonu (hover) */
+  --color-bg: #F7F7F5;;              /* sayfa arkaplanı: sıcak kırık beyaz */
+  --color-bg-alt: #EFEFEA;          /* alternatif açık zemin (kartlar) */
+  --color-dark: #20282A;            /* koyu zeytin-yeşili: header/footer */
+  --color-dark-2: #2C3533;          /* dark'ın biraz açığı (hover vs.) */
+  --color-accent: #C85A5A;          /* kiremit rengi: CTA, linkler */
+  --color-accent-light: #5A9654;    /* logo yeişili (hover) */
   --color-brass: #c9a227;           /* pirinç/sarı: yıldız, rozet, indirim etiketi */
-  --color-text: #2b2b28;            /* ana yazı rengi */
-  --color-text-muted: #6b6a63;      /* ikincil / açıklama yazıları */
+  --color-text: #20282A;            /* ana yazı rengi */
+  --color-text-muted: #68706B;      /* ikincil / açıklama yazıları */
   --color-white: #ffffff;
-  --color-border: #e3ddd0;
+  --color-border: #DDE1DC;
 
   /* -- Tipografi -- */
   --font-display: "Space Grotesk", "Segoe UI", sans-serif;  /* başlıklar */
@@ -65,8 +65,8 @@ html {
 
 /*! ekleme */
 .topbar {
-    background: black;
-    color: white;
+    background: var(--color-dark);
+    color: var(--color-white);
     padding: 10px;
 }
 
