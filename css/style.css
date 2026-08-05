@@ -17,9 +17,9 @@
 --------------------------------------------------------------------- */
 :root {
   /* -- Renk Paleti (Atölye / El Yapımı Ürün teması) -- */
-  --color-bg: #F7F7F5;;              /* sayfa arkaplanı: sıcak kırık beyaz */
+  --color-bg: #F7F7F5;              /* sayfa arkaplanı: sıcak kırık beyaz */
   --color-bg-alt: #EFEFEA;          /* alternatif açık zemin (kartlar) */
-  --color-dark: #20282A;            /* koyu zeytin-yeşili: header/footer */
+  --color-dark: #20282A;             /* koyu zeytin-yeşili: header/footer */
   --color-dark-2: #2C3533;          /* dark'ın biraz açığı (hover vs.) */
   --color-accent: #C85A5A;          /* kiremit rengi: CTA, linkler */
   --color-accent-light: #5A9654;    /* logo yeişili (hover) */
@@ -95,6 +95,125 @@ html {
 }
 
 /*? topbar end */
+/*! header start */
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.brand img {
+  width: 60px;
+  height: 60px;
+}
+
+/*! header end */
+
+/*? navbar start */
+
+.navbar-saatkulesipili {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  list-style: none;
+}
+
+/* Ana menü linkleri */
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+/* Link üzerine mouse geldiğinde */
+.nav-links a:hover {
+  color: var(--color-accent);
+}
+
+/* Kategoriler butonu */
+.dropdown-toggle {
+  border: none;
+  background: none;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Kategoriler üzerine mouse geldiğinde */
+.dropdown-toggle:hover {
+  color: var(--color-accent);
+}
+
+/* Kategoriler yazısı ile ok arasındaki boşluk */
+.dropdown-toggle i {
+  margin-left: var(--space-1);
+}
+
+/* Dropdown'un bulunduğu alan */
+.nav-item-dropdown {
+  position: relative;
+}
+
+/* Dropdown menüsü */
+.dropdown-menu {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 220px;
+
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+
+  list-style: none;
+  padding: var(--space-1) 0;
+
+  z-index: 1000;
+}
+
+/* Dropdown içindeki linkler */
+.dropdown-menu a {
+  display: block;
+  padding: var(--space-1) var(--space-2);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+/* Dropdown linklerine mouse geldiğinde */
+.dropdown-menu a:hover {
+  background: var(--color-bg-alt);
+  color: var(--color-accent);
+}
+
+/* Kategoriler üzerine gelince dropdown'u göster */
+.nav-item-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+/*? navbar end */
+
 
 body {
   font-family: var(--font-body);
