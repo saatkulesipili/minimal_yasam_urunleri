@@ -17,6 +17,7 @@
   background: var(--color-dark);
   color: var(--color-white);
   font-size: 0.85rem;
+  padding: 10px 0;
 }
 .topbar .topbar-inner {
   display: flex;                 /* FLEX konteyner */
@@ -26,11 +27,44 @@
   padding: 0.5rem 0;
   flex-wrap: wrap;                /* dar ekranda alt satıra düşsün */
 }
-.topbar-info { display: flex; gap: var(--space-3); flex-wrap: wrap; }
-.topbar-info span { display: flex; align-items: center; gap: 0.35rem; }
-.topbar-social { display: flex; gap: 0.9rem; }
-.topbar-social a { color: var(--color-white); font-size: 0.95rem; }
-.topbar-social a:hover { color: var(--color-brass); }
+.topbar-info { 
+display: flex;
+gap: var(--space-3);
+flex-wrap: wrap;
+}
+/* .topbar-info span { display: flex; align-items: center; gap: 0.35rem; } */
+
+.topbar-info a {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.topbar-info a:hover {
+  color: var(--color-accent-light);
+}
+
+.topbar-social {
+  display: flex; 
+  align-items: center;
+  gap: 0.9rem;
+  
+}
+.topbar-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 0.95rem;
+  text-decoration: none;
+
+}
+.topbar-social a:hover {
+  color: var(--color-accent-light);
+}
 
 /* ---------------------------------------------------------------------
    HEADER / NAVBAR
@@ -38,14 +72,14 @@
    sticky, relative ile fixed arasında bir davranış sergiler.
 --------------------------------------------------------------------- */
 .site-header {
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   z-index: 1000; /* içerik kaydırılırken her zaman en üstte kalsın */
-  background: var(--color-bg);
+  background: var(--color-bg); /*! renklerine tekrar çalış */
   border-bottom: 1px solid var(--color-border);
 }
 
-.navbar-atolye {
+.navbar-saatkulesipili {
   display: flex;
   align-items: center;
   justify-content: space-between;
