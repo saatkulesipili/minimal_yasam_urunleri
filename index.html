@@ -1,443 +1,655 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-
-<head>
-  <!-- ================================================================
+  <head>
+    <!-- ================================================================
        META ETİKETLERİ / SEO
        Tarayıcıya ve arama motorlarına sayfa hakkında bilgi veririz.
   ================================================================= -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO: açıklama ve anahtar kelimeler arama sonuçlarında/paylaşımlarda görünür -->
-  <meta name="description"
-    content="Saat Kulesi Pili, günlük yaşamı kolaylaştıran minimal ve işlevsel ürünleri keşfetmeniz için tasarlanmış modern bir e-ticaret sitesi.">
-  <meta name="keywords"
-    content="minimal yaşam, günlük kullanım ürünleri, minimal ürünler, ev ürünleri, yaşam ürünleri, e-ticaret">
-  <meta name="author" content="Saat Kulesi Pili">
-  <!-- Open Graph: sosyal medyada paylaşınca çıkan kart görseli/başlığı -->
-  <meta property="og:title" content="Saat Kulesi Pili | Minimal Yaşam Ürünleri">
-  <meta property="og:description" content="Günlük yaşamı kolaylaştıran minimal ve işlevsel ürünleri keşfedin.">
-  <meta property="og:type" content="website">
-  <title>Saat Kulesi Pili | Minimal Yaşam Ürünleri</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO: açıklama ve anahtar kelimeler arama sonuçlarında/paylaşımlarda görünür -->
+    <meta
+      name="description"
+      content="Saat Kulesi Pili, günlük yaşamı kolaylaştıran minimal ve işlevsel ürünleri keşfetmeniz için tasarlanmış modern bir e-ticaret sitesi."
+    />
+    <meta
+      name="keywords"
+      content="minimal yaşam, günlük kullanım ürünleri, minimal ürünler, ev ürünleri, yaşam ürünleri, e-ticaret"
+    />
+    <meta name="author" content="Saat Kulesi Pili" />
+    <!-- Open Graph: sosyal medyada paylaşınca çıkan kart görseli/başlığı -->
+    <meta
+      property="og:title"
+      content="Saat Kulesi Pili | Minimal Yaşam Ürünleri"
+    />
+    <meta
+      property="og:description"
+      content="Günlük yaşamı kolaylaştıran minimal ve işlevsel ürünleri keşfedin."
+    />
+    <meta property="og:type" content="website" />
+    <title>Saat Kulesi Pili | Minimal Yaşam Ürünleri</title>
 
-  <!-- Bootstrap 5 CSS (CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
-    rel="stylesheet">
+    <!-- Bootstrap 5 CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Kendi CSS dosyalarımız: yükleme sırası önemli! (style -> layout -> components -> responsive) -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/responsive.css">
-</head>
+    <!-- Kendi CSS dosyalarımız: yükleme sırası önemli! (style -> layout -> components -> responsive) -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
 
-<body>
-
-  <!-- ================================================================
+  <body>
+    <!-- ================================================================
        ÜST BİLGİ ŞERİDİ (Topbar)
   ================================================================= -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-info">
-        <a href="tel:02121234567"><i class="bi bi-telephone"></i>0212 123 45 67</a>
-        <a href="mailto:info@saatkulesipili.com"><i class="bi bi-envelope"></i>info@saatkulesipili.com</a>
-        <!-- <span><i class="bi bi-telephone"></i> 0212 123 45 67</span>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="topbar-info">
+          <a href="tel:02121234567"
+            ><i class="bi bi-telephone"></i>0212 123 45 67</a
+          >
+          <a href="mailto:info@saatkulesipili.com"
+            ><i class="bi bi-envelope"></i>info@saatkulesipili.com</a
+          >
+          <!-- <span><i class="bi bi-telephone"></i> 0212 123 45 67</span>
         <span><i class="bi bi-envelope"></i> info@saatkulesipili.com</span> -->
-      </div>
-      <div class="topbar-social" aria-label="Sosyal medya">
-        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
-        <a href="#" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================================================================
-       HEADER  (semantic <header> etiketi)
-       İçinde <nav> var: navbar + dropdown + arama + sepet ikonu
-  ================================================================= -->
-  <header class="site-header">
-    <div class="container navbar-saatkulesipili">
-      <a href="index.html" class="brand">
-        <img src="img/saat_kulesi_pili.png" alt="Saat Kulesi Pili">
-        <span>Saat Kulesi Pili</span>
-      </a>
-
-      <!-- <nav>: sayfanın gezinme (navigation) linklerini gruplar -->
-      <nav aria-label="Ana menü">
-        <ul class="nav-links" id="anaMenu">
-          <li><a href="index.html">Anasayfa</a></li>
-
-          <!-- DROPDOWN MENÜ -->
-          <li class="nav-item-dropdown">
-            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-              Kategoriler <i class="bi bi-chevron-down"></i>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="urunler.html?kategori=defter-ajanda">Defter &amp; Ajanda</a></li>
-              <li><a href="urunler.html?kategori=kalemler">Kalemler</a></li>
-              <li><a href="urunler.html?kategori=sticker">Sticker</a></li>
-              <li><a href="urunler.html?kategori=kalem-kutulari-cantalar">Kalem Kutuları &amp; Çantalar</a></li>
-              <li><a href="urunler.html">Tüm Kategoriler →</a></li>
-            </ul>
-          </li>
-
-          <li><a href="urunler.html">Ürünler</a></li>
-          <li><a href="hakkimizda.html">Hakkımızda</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
-        </ul>
-      </nav>
-
-      <!-- ARAMA KUTUSU -->
-      <form class="navbar-search" role="search">
-        <label for="navSearch" class="visually-hidden">Ürün ara</label>
-        <input type="search" id="navSearch" placeholder="Ürün veya kategori ara...">
-        <button type="submit" aria-label="Ara"><i class="bi bi-search"></i></button>
-      </form>
-
-      <div class="navbar-actions">
-        <a href="#" class="icon-btn" aria-label="Favorilerim">
-          <i class="bi bi-heart"></i>
-        </a>
-        <a href="sepet.html" class="icon-btn" aria-label="Sepetim">
-          <i class="bi bi-bag"></i>
-          <span class="icon-badge" data-cart-count>0</span>
-        </a>
-      </div>
-
-      <!-- Mobil hamburger butonu -->
-      <button class="nav-toggle" aria-controls="anaMenu" aria-expanded="false" aria-label="Menüyü aç/kapat">
-        <i class="bi bi-list"></i>
-      </button>
-    </div>
-  </header>
-
-  <!-- ================================================================
-       MAIN — sayfanın ana/asıl içeriği (semantic <main>: sayfada TEK olmalı)
-  ================================================================= -->
-  <main>
-
-    <!-- HERO / KARŞILAMA ALANI -->
-    <section class="hero" aria-label="Karşılama alanı">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <span class="hero-eyebrow"><i class="bi bi-stars"></i> El Emeği, Göz Nuru</span>
-          <h1>Evinize <em>karakter</em> katacak parçalar</h1>
-          <p class="lead">
-            ATÖLYE, Anadolu'nun farklı şehirlerindeki ustaların ürettiği seramik, ahşap ve
-            dokuma parçaları sizinle buluşturan butik bir e-ticaret deneyimidir. Bu proje,
-            HTML, CSS ve Bootstrap öğrenirken gerçek bir e-ticaret sitesinin nasıl
-            kurgulandığını görmen için hazırlandı.
-          </p>
-          <div class="hero-cta">
-            <a href="urunler.html" class="btn-atolye">Ürünleri Keşfet <i class="bi bi-arrow-right"></i></a>
-            <a href="hakkimizda.html" class="btn-outline-atolye">Hikayemiz</a>
-          </div>
-
-          <!-- İSTATİSTİK ALANI -->
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-num">120+</span>
-              <span class="stat-label">Usta Zanaatkâr</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">8.400</span>
-              <span class="stat-label">Mutlu Müşteri</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">4.9<i class="bi bi-star-fill" style="font-size:.9rem"></i></span>
-              <span class="stat-label">Ortalama Puan</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">%100</span>
-              <span class="stat-label">El Yapımı</span>
-            </div>
-          </div>
         </div>
-
-        <div class="hero-media">
-          <img src="https://images.unsplash.com/photo-1565193566173-7a0af771d71a?w=700&q=80"
-            alt="Elde şekillendirilen seramik çömlek">
-          <div class="hero-floating-badge">
-            <i class="bi bi-truck" style="font-size:1.4rem;color:var(--color-accent)"></i>
-            <div>
-              <strong style="display:block;font-size:.85rem">Ücretsiz Kargo</strong>
-              <span style="font-size:.75rem;color:var(--color-text-muted)">500₺ üzeri siparişlerde</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GÜVEN ŞERİDİ -->
-    <div class="container" style="margin-top:-28px; position:relative; z-index:5;">
-      <div class="trust-strip">
-        <div class="trust-item"><i class="bi bi-truck"></i>
-          <div><strong>Hızlı Kargo</strong><span>2-4 iş günü teslimat</span></div>
-        </div>
-        <div class="trust-item"><i class="bi bi-arrow-repeat"></i>
-          <div><strong>Kolay İade</strong><span>14 gün içinde ücretsiz</span></div>
-        </div>
-        <div class="trust-item"><i class="bi bi-shield-check"></i>
-          <div><strong>Güvenli Ödeme</strong><span>256-bit SSL koruması</span></div>
-        </div>
-        <div class="trust-item"><i class="bi bi-award"></i>
-          <div><strong>Usta Onaylı</strong><span>Her parça elde kontrol edilir</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- KATEGORİLER (section + article kullanımı) -->
-    <section class="container container-section" aria-label="Kategoriler">
-      <div class="section-title">
-        <span class="eyebrow">Koleksiyonlar</span>
-        <h2>Kategoriye Göre Keşfet</h2>
-        <p>Her kategori, farklı bir atölyenin ve farklı bir hikayenin kapısını aralar.</p>
-      </div>
-
-      <div class="category-grid">
-        <article class="category-card">
-          <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&q=80" alt="Seramik ürünler">
-          <span>Seramik</span>
-        </article>
-        <article class="category-card">
-          <img src="https://images.unsplash.com/photo-1601058268499-e52658b8bb88?w=500&q=80" alt="Ahşap ürünler">
-          <span>Ahşap</span>
-        </article>
-        <article class="category-card">
-          <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&q=80" alt="Tekstil ürünler">
-          <span>Tekstil</span>
-        </article>
-        <article class="category-card">
-          <img src="https://images.unsplash.com/photo-1602874801007-bd458bb1b8ee?w=500&q=80" alt="El yapımı mumlar">
-          <span>Mumlar</span>
-        </article>
-      </div>
-    </section>
-
-    <!-- ÖNE ÇIKAN ÜRÜNLER -->
-    <section class="container container-section" aria-label="Öne çıkan ürünler"
-      style="background:var(--color-bg-alt); border-radius:12px;">
-      <div class="section-title">
-        <span class="eyebrow">Bu Hafta</span>
-        <h2>Öne Çıkan Ürünler</h2>
-        <p>En çok sepete eklenen ve en yüksek puanlı parçalarımız.</p>
-      </div>
-
-      <div class="product-grid">
-        <!-- ÜRÜN KARTI 1 -->
-        <article class="product-card fade-up">
-          <div class="product-media">
-            <span class="product-badge">-%20</span>
-            <button class="product-wishlist" aria-label="Favorilere ekle"><i class="bi bi-heart"></i></button>
-            <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&q=80"
-              alt="El yapımı seramik kase">
-          </div>
-          <div class="product-body">
-            <span class="product-category">Seramik</span>
-            <h3 class="product-title">Toprak Tonu Kase Seti</h3>
-            <div class="product-specs"><span>Ø 18 cm</span><span>El Yapımı</span></div>
-            <div class="product-rating">★★★★★ <span>(128)</span></div>
-            <div class="product-footer">
-              <span class="product-price"><span class="old-price">450₺</span>360₺</span>
-              <button class="btn-add-cart" data-add-to-cart data-id="urun-001" data-name="Toprak Tonu Kase Seti"
-                data-price="360" data-category="Seramik"
-                data-image="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&q=80"
-                aria-label="Sepete ekle"><i class="bi bi-plus-lg"></i></button>
-            </div>
-          </div>
-        </article>
-
-        <!-- ÜRÜN KARTI 2 -->
-        <article class="product-card fade-up">
-          <div class="product-media">
-            <span class="product-badge badge-new">Yeni</span>
-            <button class="product-wishlist" aria-label="Favorilere ekle"><i class="bi bi-heart"></i></button>
-            <img src="https://images.unsplash.com/photo-1611486212557-88be5ff6f941?w=500&q=80"
-              alt="Ahşap kesme tahtası">
-          </div>
-          <div class="product-body">
-            <span class="product-category">Ahşap</span>
-            <h3 class="product-title">Ceviz Ağacı Kesme Tahtası</h3>
-            <div class="product-specs"><span>40x25 cm</span><span>Ceviz</span></div>
-            <div class="product-rating">★★★★★ <span>(64)</span></div>
-            <div class="product-footer">
-              <span class="product-price">590₺</span>
-              <button class="btn-add-cart" data-add-to-cart data-id="urun-002" data-name="Ceviz Ağacı Kesme Tahtası"
-                data-price="590" data-category="Ahşap"
-                data-image="https://images.unsplash.com/photo-1611486212557-88be5ff6f941?w=500&q=80"
-                aria-label="Sepete ekle"><i class="bi bi-plus-lg"></i></button>
-            </div>
-          </div>
-        </article>
-
-        <!-- ÜRÜN KARTI 3 -->
-        <article class="product-card fade-up">
-          <div class="product-media">
-            <button class="product-wishlist" aria-label="Favorilere ekle"><i class="bi bi-heart"></i></button>
-            <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=500&q=80"
-              alt="El dokuma yastık kılıfı">
-          </div>
-          <div class="product-body">
-            <span class="product-category">Tekstil</span>
-            <h3 class="product-title">El Dokuma Yastık Kılıfı</h3>
-            <div class="product-specs"><span>45x45 cm</span><span>%100 Pamuk</span></div>
-            <div class="product-rating">★★★★☆ <span>(41)</span></div>
-            <div class="product-footer">
-              <span class="product-price">275₺</span>
-              <button class="btn-add-cart" data-add-to-cart data-id="urun-003" data-name="El Dokuma Yastık Kılıfı"
-                data-price="275" data-category="Tekstil"
-                data-image="https://images.unsplash.com/photo-1600166898405-da9535204843?w=500&q=80"
-                aria-label="Sepete ekle"><i class="bi bi-plus-lg"></i></button>
-            </div>
-          </div>
-        </article>
-
-        <!-- ÜRÜN KARTI 4 -->
-        <article class="product-card fade-up">
-          <div class="product-media">
-            <span class="product-badge">Tükeniyor</span>
-            <button class="product-wishlist" aria-label="Favorilere ekle"><i class="bi bi-heart"></i></button>
-            <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500&q=80"
-              alt="El yapımı soya mumu">
-          </div>
-          <div class="product-body">
-            <span class="product-category">Mum</span>
-            <h3 class="product-title">Lavanta Soya Mumu</h3>
-            <div class="product-specs"><span>220 gr</span><span>Soya Balmumu</span></div>
-            <div class="product-rating">★★★★★ <span>(203)</span></div>
-            <div class="product-footer">
-              <span class="product-price">145₺</span>
-              <button class="btn-add-cart" data-add-to-cart data-id="urun-004" data-name="Lavanta Soya Mumu"
-                data-price="145" data-category="Mum"
-                data-image="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500&q=80"
-                aria-label="Sepete ekle"><i class="bi bi-plus-lg"></i></button>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="text-center mt-4">
-        <a href="urunler.html" class="btn-atolye">Tüm Ürünleri Gör</a>
-      </div>
-    </section>
-
-    <!-- ATÖLYE HİKAYESİ + VİDEO -->
-    <section class="container container-section" aria-label="Atölye hikayesi">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-6">
-          <span class="eyebrow">Kamera Arkası</span>
-          <h2>Bir Parça Nasıl Doğar?</h2>
-          <p class="text-muted">
-            Her ürün, ustanın elinde saatlerce şekillenir. Aşağıdaki kısa videoda
-            bir seramik kâsenin tekerlekte şekillenmesinden fırınlanmasına kadar
-            olan yolculuğunu izleyebilirsin.
-          </p>
-          <ul style="list-style:none; padding:0; margin-top:1rem;">
-            <li class="mb-2"><i class="bi bi-check-circle-fill" style="color:var(--color-accent)"></i> %100 el yapımı
-              üretim</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill" style="color:var(--color-accent)"></i> Doğal ve
-              sürdürülebilir malzeme</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill" style="color:var(--color-accent)"></i> Her siparişte
-              usta imzalı kart</li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <!-- VIDEO ETİKETİ: controls ile oynat/durdur, ses vb. kontrolleri tarayıcı ekler -->
-          <video controls poster="https://images.unsplash.com/photo-1565193566173-7a0af771d71a?w=800&q=80"
-            style="width:100%; border-radius:12px; box-shadow:var(--shadow-card);">
-            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-          </video>
-        </div>
-      </div>
-    </section>
-
-    <!-- BÜLTEN / NEWSLETTER ÇAĞRISI -->
-    <section class="container-section" style="background:var(--color-dark); color:var(--color-white);">
-      <div class="container text-center">
-        <h2 style="color:var(--color-white)">Atölyeden Haberdar Ol</h2>
-        <p style="color:rgba(255,255,255,.75); max-width:32rem; margin:.5rem auto 1.5rem;">
-          Yeni koleksiyonlar, usta röportajları ve özel indirimler için bültenimize katıl.
-        </p>
-        <form class="newsletter-form" style="max-width:420px; margin:0 auto;">
-          <label for="heroNewsletter" class="visually-hidden">E-posta adresin</label>
-          <input type="email" id="heroNewsletter" placeholder="E-posta adresin" required>
-          <button type="submit">Abone Ol</button>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ================================================================
-       FOOTER  (semantic <footer>) — çok kolonlu
-  ================================================================= -->
-  <footer class="site-footer">
-    <div class="container footer-top">
-      <div class="footer-col footer-brand">
-        <a href="index.html" class="brand" style="color:var(--color-white)">🪵 ATÖLYE<span>.</span></a>
-        <p>El yapımı seramik, ahşap ve tekstil ürünlerini Anadolu'nun ustalarından evinize taşıyoruz.</p>
-        <div class="footer-social">
+        <div class="topbar-social" aria-label="Sosyal medya">
           <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
           <a href="#" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Alışveriş</h4>
-        <ul>
-          <li><a href="urunler.html">Tüm Ürünler</a></li>
-          <li><a href="urunler.html?kategori=seramik">Seramik</a></li>
-          <li><a href="urunler.html?kategori=ahsap">Ahşap</a></li>
-          <li><a href="sepet.html">Sepetim</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Kurumsal</h4>
-        <ul>
-          <li><a href="hakkimizda.html">Hakkımızda</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
-          <li><a href="#">Kariyer</a></li>
-          <li><a href="#">Gizlilik Politikası</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Bültenimize Katıl</h4>
-        <p style="color:rgba(255,255,255,.6); font-size:.9rem;">Kampanyalardan ilk sen haberdar ol.</p>
-        <form class="newsletter-form">
-          <label for="footerNewsletter" class="visually-hidden">E-posta</label>
-          <input type="email" id="footerNewsletter" placeholder="E-posta adresin" required>
-          <button type="submit"><i class="bi bi-send"></i></button>
+    </div>
+
+    <!-- ================================================================
+       HEADER  (semantic <header> etiketi)
+       İçinde <nav> var: navbar + dropdown + arama + sepet ikonu
+  ================================================================= -->
+    <header class="site-header">
+      <div class="container navbar-saatkulesipili">
+        <a href="index.html" class="brand">
+          <img src="img/saat_kulesi_pili.png" alt="Saat Kulesi Pili" />
+          <span>Saat Kulesi Pili</span>
+        </a>
+
+        <!-- <nav>: sayfanın gezinme (navigation) linklerini gruplar -->
+        <nav aria-label="Ana menü">
+          <ul class="nav-links" id="anaMenu">
+            <li><a href="index.html">Anasayfa</a></li>
+
+            <!-- DROPDOWN MENÜ -->
+            <li class="nav-item-dropdown">
+              <button
+                class="dropdown-toggle"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Kategoriler <i class="bi bi-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="urunler.html?kategori=defter-ajanda"
+                    >Defter &amp; Ajanda</a
+                  >
+                </li>
+                <li><a href="urunler.html?kategori=kalemler">Kalemler</a></li>
+                <li><a href="urunler.html?kategori=sticker">Sticker</a></li>
+                <li>
+                  <a href="urunler.html?kategori=kalem-kutulari-cantalar"
+                    >Kalem Kutuları &amp; Çantalar</a
+                  >
+                </li>
+                <li><a href="urunler.html">Tüm Kategoriler →</a></li>
+              </ul>
+            </li>
+
+            <li><a href="urunler.html">Ürünler</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </nav>
+
+        <!-- ARAMA KUTUSU -->
+        <form class="navbar-search" role="search">
+          <label for="navSearch" class="visually-hidden">Ürün ara</label>
+          <input
+            type="search"
+            id="navSearch"
+            placeholder="Ürün veya kategori ara..."
+          />
+          <button type="submit" aria-label="Ara">
+            <i class="bi bi-search"></i>
+          </button>
         </form>
+
+        <div class="navbar-actions">
+          <a href="#" class="icon-btn" aria-label="Favorilerim">
+            <i class="bi bi-heart"></i>
+          </a>
+          <a href="sepet.html" class="icon-btn" aria-label="Sepetim">
+            <i class="bi bi-bag"></i>
+            <span class="icon-badge" data-cart-count>0</span>
+          </a>
+        </div>
+
+        <!-- Mobil hamburger butonu -->
+        <button
+          class="nav-toggle"
+          aria-controls="anaMenu"
+          aria-expanded="false"
+          aria-label="Menüyü aç/kapat"
+        >
+          <i class="bi bi-list"></i>
+        </button>
       </div>
-    </div>
+    </header>
 
-    <div class="container footer-bottom">
-      <p>&copy; 2026 ATÖLYE Eğitim Projesi — Tüm hakları saklıdır.</p>
-      <div class="payment-icons">
-        <i class="bi bi-credit-card"></i>
-        <i class="bi bi-paypal"></i>
-        <i class="bi bi-wallet2"></i>
+    <!-- ================================================================
+       MAIN — sayfanın ana/asıl içeriği (semantic <main>: sayfada TEK olmalı)
+  ================================================================= -->
+    <main>
+      <!-- HERO / KARŞILAMA ALANI -->
+      <section class="hero" aria-label="Karşılama alanı">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <span class="hero-eyebrow"
+              ><i class="bi bi-stars"></i>Günlük Hayata Küçük Dokunuşlar</span
+            >
+            <h1>Gününüze ilham katacak parçalar</h1>
+            <p class="lead">
+              Saat Kulesi Pili, günlük hayatınızı daha keyifli ve düzenli hale
+              getiren sade, kullanışlı ve karakter sahibi ürünleri bir araya
+              getiren butik bir e-ticaret mağazasıdır. Defterlerden kalemlere,
+              stickerlardan kalem kutularına kadar günlük kullanımınıza eşlik
+              edecek parçaları keşfedin.
+            </p>
+            <div class="hero-cta">
+              <a href="urunler.html" class="btn-atolye"
+                >Ürünleri Keşfet <i class="bi bi-arrow-right"></i
+              ></a>
+              <a href="hakkimizda.html" class="btn-outline-atolye">Hikayemiz</a>
+            </div>
+
+            <!-- İSTATİSTİK ALANI -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-num">120+</span>
+                <span class="stat-label">Usta Zanaatkâr</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">8.400</span>
+                <span class="stat-label">Mutlu Müşteri</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num"
+                  >4.9<i class="bi bi-star-fill" style="font-size: 0.9rem"></i
+                ></span>
+                <span class="stat-label">Ortalama Puan</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">%100</span>
+                <span class="stat-label">El Yapımı</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <img
+              src="https://images.unsplash.com/photo-1565193566173-7a0af771d71a?w=700&q=80"
+              alt="Elde şekillendirilen seramik çömlek"
+            />
+            <div class="hero-floating-badge">
+              <i
+                class="bi bi-truck"
+                style="font-size: 1.4rem; color: var(--color-accent)"
+              ></i>
+              <div>
+                <strong style="display: block; font-size: 0.85rem"
+                  >Ücretsiz Kargo</strong
+                >
+                <span style="font-size: 0.75rem; color: var(--color-text-muted)"
+                  >500₺ üzeri siparişlerde</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GÜVEN ŞERİDİ -->
+      <div
+        class="container"
+        style="margin-top: -28px; position: relative; z-index: 5"
+      >
+        <div class="trust-strip">
+          <div class="trust-item">
+            <i class="bi bi-truck"></i>
+            <div>
+              <strong>Hızlı Kargo</strong><span>2-4 iş günü teslimat</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="bi bi-arrow-repeat"></i>
+            <div>
+              <strong>Kolay İade</strong><span>14 gün içinde ücretsiz</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="bi bi-shield-check"></i>
+            <div>
+              <strong>Güvenli Ödeme</strong><span>256-bit SSL koruması</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="bi bi-award"></i>
+            <div>
+              <strong>Usta Onaylı</strong
+              ><span>Her parça elde kontrol edilir</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
 
-  <!-- YUKARI ÇIK BUTONU -->
-  <button class="back-to-top" aria-label="Sayfa başına dön"><i class="bi bi-arrow-up"></i></button>
+      <!-- KATEGORİLER (section + article kullanımı) -->
+      <section class="container container-section" aria-label="Kategoriler">
+        <div class="section-title">
+          <span class="eyebrow">Koleksiyonlar</span>
+          <h2>Kategoriye Göre Keşfet</h2>
+          <p>
+            Her kategori, farklı bir atölyenin ve farklı bir hikayenin kapısını
+            aralar.
+          </p>
+        </div>
 
-  <!-- Bootstrap JS Bundle (dropdown, collapse gibi bileşenler için) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/main.js"></script>
-</body>
+        <div class="category-grid">
+          <article class="category-card">
+            <img
+              src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&q=80"
+              alt="Seramik ürünler"
+            />
+            <span>Seramik</span>
+          </article>
+          <article class="category-card">
+            <img
+              src="https://images.unsplash.com/photo-1601058268499-e52658b8bb88?w=500&q=80"
+              alt="Ahşap ürünler"
+            />
+            <span>Ahşap</span>
+          </article>
+          <article class="category-card">
+            <img
+              src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&q=80"
+              alt="Tekstil ürünler"
+            />
+            <span>Tekstil</span>
+          </article>
+          <article class="category-card">
+            <img
+              src="https://images.unsplash.com/photo-1602874801007-bd458bb1b8ee?w=500&q=80"
+              alt="El yapımı mumlar"
+            />
+            <span>Mumlar</span>
+          </article>
+        </div>
+      </section>
 
+      <!-- ÖNE ÇIKAN ÜRÜNLER -->
+      <section
+        class="container container-section"
+        aria-label="Öne çıkan ürünler"
+        style="background: var(--color-bg-alt); border-radius: 12px"
+      >
+        <div class="section-title">
+          <span class="eyebrow">Bu Hafta</span>
+          <h2>Öne Çıkan Ürünler</h2>
+          <p>En çok sepete eklenen ve en yüksek puanlı parçalarımız.</p>
+        </div>
+
+        <div class="product-grid">
+          <!-- ÜRÜN KARTI 1 -->
+          <article class="product-card fade-up">
+            <div class="product-media">
+              <span class="product-badge">-%20</span>
+              <button class="product-wishlist" aria-label="Favorilere ekle">
+                <i class="bi bi-heart"></i>
+              </button>
+              <img
+                src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&q=80"
+                alt="El yapımı seramik kase"
+              />
+            </div>
+            <div class="product-body">
+              <span class="product-category">Seramik</span>
+              <h3 class="product-title">Toprak Tonu Kase Seti</h3>
+              <div class="product-specs">
+                <span>Ø 18 cm</span><span>El Yapımı</span>
+              </div>
+              <div class="product-rating">★★★★★ <span>(128)</span></div>
+              <div class="product-footer">
+                <span class="product-price"
+                  ><span class="old-price">450₺</span>360₺</span
+                >
+                <button
+                  class="btn-add-cart"
+                  data-add-to-cart
+                  data-id="urun-001"
+                  data-name="Toprak Tonu Kase Seti"
+                  data-price="360"
+                  data-category="Seramik"
+                  data-image="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&q=80"
+                  aria-label="Sepete ekle"
+                >
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ÜRÜN KARTI 2 -->
+          <article class="product-card fade-up">
+            <div class="product-media">
+              <span class="product-badge badge-new">Yeni</span>
+              <button class="product-wishlist" aria-label="Favorilere ekle">
+                <i class="bi bi-heart"></i>
+              </button>
+              <img
+                src="https://images.unsplash.com/photo-1611486212557-88be5ff6f941?w=500&q=80"
+                alt="Ahşap kesme tahtası"
+              />
+            </div>
+            <div class="product-body">
+              <span class="product-category">Ahşap</span>
+              <h3 class="product-title">Ceviz Ağacı Kesme Tahtası</h3>
+              <div class="product-specs">
+                <span>40x25 cm</span><span>Ceviz</span>
+              </div>
+              <div class="product-rating">★★★★★ <span>(64)</span></div>
+              <div class="product-footer">
+                <span class="product-price">590₺</span>
+                <button
+                  class="btn-add-cart"
+                  data-add-to-cart
+                  data-id="urun-002"
+                  data-name="Ceviz Ağacı Kesme Tahtası"
+                  data-price="590"
+                  data-category="Ahşap"
+                  data-image="https://images.unsplash.com/photo-1611486212557-88be5ff6f941?w=500&q=80"
+                  aria-label="Sepete ekle"
+                >
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ÜRÜN KARTI 3 -->
+          <article class="product-card fade-up">
+            <div class="product-media">
+              <button class="product-wishlist" aria-label="Favorilere ekle">
+                <i class="bi bi-heart"></i>
+              </button>
+              <img
+                src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=500&q=80"
+                alt="El dokuma yastık kılıfı"
+              />
+            </div>
+            <div class="product-body">
+              <span class="product-category">Tekstil</span>
+              <h3 class="product-title">El Dokuma Yastık Kılıfı</h3>
+              <div class="product-specs">
+                <span>45x45 cm</span><span>%100 Pamuk</span>
+              </div>
+              <div class="product-rating">★★★★☆ <span>(41)</span></div>
+              <div class="product-footer">
+                <span class="product-price">275₺</span>
+                <button
+                  class="btn-add-cart"
+                  data-add-to-cart
+                  data-id="urun-003"
+                  data-name="El Dokuma Yastık Kılıfı"
+                  data-price="275"
+                  data-category="Tekstil"
+                  data-image="https://images.unsplash.com/photo-1600166898405-da9535204843?w=500&q=80"
+                  aria-label="Sepete ekle"
+                >
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ÜRÜN KARTI 4 -->
+          <article class="product-card fade-up">
+            <div class="product-media">
+              <span class="product-badge">Tükeniyor</span>
+              <button class="product-wishlist" aria-label="Favorilere ekle">
+                <i class="bi bi-heart"></i>
+              </button>
+              <img
+                src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500&q=80"
+                alt="El yapımı soya mumu"
+              />
+            </div>
+            <div class="product-body">
+              <span class="product-category">Mum</span>
+              <h3 class="product-title">Lavanta Soya Mumu</h3>
+              <div class="product-specs">
+                <span>220 gr</span><span>Soya Balmumu</span>
+              </div>
+              <div class="product-rating">★★★★★ <span>(203)</span></div>
+              <div class="product-footer">
+                <span class="product-price">145₺</span>
+                <button
+                  class="btn-add-cart"
+                  data-add-to-cart
+                  data-id="urun-004"
+                  data-name="Lavanta Soya Mumu"
+                  data-price="145"
+                  data-category="Mum"
+                  data-image="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500&q=80"
+                  aria-label="Sepete ekle"
+                >
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="urunler.html" class="btn-atolye">Tüm Ürünleri Gör</a>
+        </div>
+      </section>
+
+      <!-- ATÖLYE HİKAYESİ + VİDEO -->
+      <section class="container container-section" aria-label="Atölye hikayesi">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="eyebrow">Kamera Arkası</span>
+            <h2>Bir Parça Nasıl Doğar?</h2>
+            <p class="text-muted">
+              Her ürün, ustanın elinde saatlerce şekillenir. Aşağıdaki kısa
+              videoda bir seramik kâsenin tekerlekte şekillenmesinden
+              fırınlanmasına kadar olan yolculuğunu izleyebilirsin.
+            </p>
+            <ul style="list-style: none; padding: 0; margin-top: 1rem">
+              <li class="mb-2">
+                <i
+                  class="bi bi-check-circle-fill"
+                  style="color: var(--color-accent)"
+                ></i>
+                %100 el yapımı üretim
+              </li>
+              <li class="mb-2">
+                <i
+                  class="bi bi-check-circle-fill"
+                  style="color: var(--color-accent)"
+                ></i>
+                Doğal ve sürdürülebilir malzeme
+              </li>
+              <li class="mb-2">
+                <i
+                  class="bi bi-check-circle-fill"
+                  style="color: var(--color-accent)"
+                ></i>
+                Her siparişte usta imzalı kart
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <!-- VIDEO ETİKETİ: controls ile oynat/durdur, ses vb. kontrolleri tarayıcı ekler -->
+            <video
+              controls
+              poster="https://images.unsplash.com/photo-1565193566173-7a0af771d71a?w=800&q=80"
+              style="
+                width: 100%;
+                border-radius: 12px;
+                box-shadow: var(--shadow-card);
+              "
+            >
+              <source
+                src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                type="video/mp4"
+              />
+              Tarayıcınız video etiketini desteklemiyor.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- BÜLTEN / NEWSLETTER ÇAĞRISI -->
+      <section
+        class="container-section"
+        style="background: var(--color-dark); color: var(--color-white)"
+      >
+        <div class="container text-center">
+          <h2 style="color: var(--color-white)">Atölyeden Haberdar Ol</h2>
+          <p
+            style="
+              color: rgba(255, 255, 255, 0.75);
+              max-width: 32rem;
+              margin: 0.5rem auto 1.5rem;
+            "
+          >
+            Yeni koleksiyonlar, usta röportajları ve özel indirimler için
+            bültenimize katıl.
+          </p>
+          <form
+            class="newsletter-form"
+            style="max-width: 420px; margin: 0 auto"
+          >
+            <label for="heroNewsletter" class="visually-hidden"
+              >E-posta adresin</label
+            >
+            <input
+              type="email"
+              id="heroNewsletter"
+              placeholder="E-posta adresin"
+              required
+            />
+            <button type="submit">Abone Ol</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================================================================
+       FOOTER  (semantic <footer>) — çok kolonlu
+  ================================================================= -->
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand" style="color: var(--color-white)"
+            >🪵 ATÖLYE<span>.</span></a
+          >
+          <p>
+            El yapımı seramik, ahşap ve tekstil ürünlerini Anadolu'nun
+            ustalarından evinize taşıyoruz.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Pinterest"
+              ><i class="bi bi-pinterest"></i
+            ></a>
+            <a href="#" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Alışveriş</h4>
+          <ul>
+            <li><a href="urunler.html">Tüm Ürünler</a></li>
+            <li><a href="urunler.html?kategori=seramik">Seramik</a></li>
+            <li><a href="urunler.html?kategori=ahsap">Ahşap</a></li>
+            <li><a href="sepet.html">Sepetim</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kurumsal</h4>
+          <ul>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="#">Kariyer</a></li>
+            <li><a href="#">Gizlilik Politikası</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Bültenimize Katıl</h4>
+          <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem">
+            Kampanyalardan ilk sen haberdar ol.
+          </p>
+          <form class="newsletter-form">
+            <label for="footerNewsletter" class="visually-hidden"
+              >E-posta</label
+            >
+            <input
+              type="email"
+              id="footerNewsletter"
+              placeholder="E-posta adresin"
+              required
+            />
+            <button type="submit"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 ATÖLYE Eğitim Projesi — Tüm hakları saklıdır.</p>
+        <div class="payment-icons">
+          <i class="bi bi-credit-card"></i>
+          <i class="bi bi-paypal"></i>
+          <i class="bi bi-wallet2"></i>
+        </div>
+      </div>
+    </footer>
+
+    <!-- YUKARI ÇIK BUTONU -->
+    <button class="back-to-top" aria-label="Sayfa başına dön">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS Bundle (dropdown, collapse gibi bileşenler için) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
