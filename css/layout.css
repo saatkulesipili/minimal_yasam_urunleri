@@ -229,7 +229,7 @@ position: relative;
 }
 .navbar-search button {
   border: none;
-  background: var(--color-dark);
+  background: var(--color-accent-light);
   color: var(--color-white);
   width: 34px; height: 34px;
   border-radius: 50%;
@@ -240,7 +240,11 @@ position: relative;
 .navbar-search button:hover { background: var(--color-accent); }
 
 /* --- Navbar sağ ikonlar (favoriler / sepet) --- */
-.navbar-actions { display: flex; align-items: center; gap: var(--space-2); }
+.navbar-actions {
+  display: flex; 
+  align-items: center;
+  gap: var(--space-2);
+}
 .icon-btn {
   position: relative;
   display: flex;
