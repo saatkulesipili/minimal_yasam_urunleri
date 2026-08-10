@@ -66,8 +66,8 @@ Stilini Yansıt: Kurumsal bir marka mısın, yoksa dinamik ve genç mi? css/styl
 12. `css/layout.css` içindeki `.footer-top`'un `grid-template-columns`
     değerini `1.4fr 1fr 1fr 1.2fr` yerine 5 kolonlu bir yapıya çevir ve
     footer'a yeni bir kolon (örn. "Sıkça Sorulan Sorular") ekle.
-13. `.hero-stats` bölümüne (flexbox) 5. bir istatistik kartı ekle
-    (örn. "50+ Şehre Kargo").
+<!-- 13. `.hero-stats` bölümüne (flexbox) 5. bir istatistik kartı ekle
+    (örn. "50+ Şehre Kargo"). -->
 14. `css/components.css` içindeki `.category-grid`'in kolon sayısını
     4'ten 3'e düşür, görsel dengeyi nasıl etkilediğini gözlemle.
 
