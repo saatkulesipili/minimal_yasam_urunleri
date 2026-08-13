@@ -27,15 +27,15 @@ Stilini Yansıt: Kurumsal bir marka mısın, yoksa dinamik ve genç mi? css/styl
 
 1. `index.html` dosyasını tarayıcıda aç. Sayfadaki tüm bölümleri (topbar,
    navbar, hero, kategoriler, ürünler, video, bülten, footer) tek tek
-   incele ve her birinin HTML kodunda nerede başlayıp bittiğini bul.
+   incele ve her birinin HTML kodunda nerede başlayıp bittiğini bul. <!--! Bakıldı. Devam ediyor. -->
 2. `css/style.css` içindeki `:root` bloğunda `--color-accent` değerini
    başka bir renge çevir (örn. mavi tonu `#2c5f8a`). Sitenin genelinde
-   nelerin değiştiğini gözlemle ve bir liste çıkar.
+   nelerin değiştiğini gözlemle ve bir liste çıkar. <!--? En son bakılacak. -->
 3. `--font-display` değişkenini Google Fonts'tan seçtiğin başka bir
    fontla değiştir (fontu `<head>` içindeki `<link>` etiketine de eklemeyi
-   unutma).
+   unutma). <!--! En son bakılacak. -->
 4. Navbar'daki marka adını (`ATÖLYE`) kendi seçtiğin bir marka ismiyle
-   değiştir. Logo emojisini de değiştir.
+   değiştir. Logo emojisini de değiştir. <!--? Tamamlandı. -->
 
 ## 🟡 Seviye 2 — HTML Yapısını Anlama
 

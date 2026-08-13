@@ -62,50 +62,6 @@
 html {
   scroll-behavior: smooth; /* # linklere tıklayınca yumuşak kaydırma */
 }
-/* 
-///*! ekleme 
-
-/*? topbar start */
-/* .topbar {
-    background: var(--color-dark);
-    color: var(--color-white);
-    padding: 10px;
-}
-
-.topbar-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-}
-
-.topbar-info {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-}
-.topbar-info i {
-    margin-right: var(--space-1);
-}
-
-.topbar-social {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-}
- */
-
-
-
-
-body {
-  font-family: var(--font-body);
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  line-height: 1.6;
-  /* overflow-x: hidden -> yatay taşan animasyon/elementleri gizler */
-  overflow-x: hidden;
-}
 
 /* ELEMENT SELECTOR örneği: tüm h1-h4 başlıkları */
 h1, h2, h3, h4 {
@@ -150,13 +106,14 @@ img { max-width: 100%; display: block; }
   display: inline-block;
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.15em; /*Harfler arası boşluğu artırır. */
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-accent-light);
   border: 1px solid var(--color-accent); /* BORDER */
   padding: 0.25rem 0.75rem;              /* PADDING (iç boşluk) */
   border-radius: 999px;
-  margin-bottom: var(--space-2);         /* MARGIN (dış boşluk) */
+  margin-bottom: var(--space-4);  /* MARGIN (dış boşluk) */
+  
 }
 
 .section-title p {

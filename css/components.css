@@ -166,10 +166,18 @@
 .category-card::before { /* koyu gradient overlay: yazı okunabilir olsun */
   content: "";
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.65) 100%);
+  background: linear-gradient(
+    180deg, 
+    rgba(0,0,0,0) 40%, 
+    rgba(0,0,0,0.65) 100%
+    );
   z-index: 1;
 }
-.category-card span { position: relative; z-index: 2; }
+.category-card span { 
+  position: relative; 
+  z-index: 2; 
+}
+
 .category-card:hover img { transform: scale(1.1); }
 
 /* ---------------------------------------------------------------------
