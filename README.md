@@ -1,39 +1,39 @@
 # Saat Kulesi Pili
 
-Modern, sade ve kullanıcı dostu bir **kırtasiye ve günlük kullanım ürünleri e-ticaret sitesi** tasarımı.
+A modern, minimalist, and user-friendly **e-commerce website for stationery and everyday products**.
 
-Bu proje, HTML, CSS ve Bootstrap kullanılarak geliştirilmiş bir web sitesi çalışmasıdır. Proje aynı zamanda frontend geliştirme sürecinde HTML yapısı, CSS ile sayfa tasarımı, responsive tasarım ve Bootstrap kullanımı konularında pratik yapmak amacıyla hazırlanmıştır.
+This project was developed using HTML, CSS, and Bootstrap. It was created as a learning project to practice frontend development concepts such as HTML structure, CSS styling, responsive design, and Bootstrap.
 
-> **Not:** Bu proje bir öğrenme ve geliştirme projesidir.
-
----
-
-## 📌 Proje Hakkında
-
-**Saat Kulesi Pili**, kullanıcıların kırtasiye ve günlük kullanım ürünlerini inceleyebileceği modern bir e-ticaret sitesi konseptidir.
-
-Sitede sade bir tasarım dili, kolay kullanılabilir bir navigasyon yapısı ve ürünleri kategorilere ayıran bölümler kullanılmıştır.
-
-Projenin temel amacı, kullanıcıya hem görsel açıdan düzenli hem de kullanımı kolay bir alışveriş deneyimi sunan frontend arayüzü oluşturmaktır.
+> **Note:** This project is created for learning and development purposes.
 
 ---
 
-## 🎯 Projenin Amacı
+## 📌 About the Project
 
-Bu projenin hazırlanma amaçları:
+**Saat Kulesi Pili** is a modern e-commerce website concept where users can explore stationery and everyday products.
 
-* HTML5 kullanarak semantik ve düzenli sayfa yapıları oluşturmak
-* CSS ile modern ve responsive tasarımlar geliştirmek
-* Bootstrap kullanımını öğrenmek ve uygulamak
-* Flexbox ve CSS Grid ile sayfa düzenleri oluşturmak
-* Responsive tasarım mantığını öğrenmek
-* BEM metodolojisini kullanarak CSS sınıflarını düzenlemek
-* Git ve GitHub kullanımında pratik yapmak
-* Frontend geliştirme sürecini gerçek bir proje üzerinden deneyimlemek
+The website focuses on a clean and minimalist design, easy navigation, and well-organized product categories.
+
+The main goal of the project is to create a visually appealing and user-friendly frontend interface that provides a simple shopping experience.
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+## 🎯 Project Goals
+
+The main goals of this project are:
+
+* Build semantic and well-structured pages using HTML5
+* Create modern and responsive designs with CSS
+* Learn and practice Bootstrap
+* Build layouts using Flexbox and CSS Grid
+* Understand responsive design principles
+* Use the BEM methodology for organizing CSS classes
+* Practice using Git and GitHub
+* Gain practical experience by developing a real-world frontend project
+
+---
+
+## 🛠️ Technologies Used
 
 * **HTML5**
 * **CSS3**
@@ -46,38 +46,38 @@ Bu projenin hazırlanma amaçları:
 
 ---
 
-## 📄 Sayfalar
+## 📄 Pages
 
-Projede aşağıdaki sayfalar bulunmaktadır:
+The project includes the following pages:
 
-* **Anasayfa**
-* **Ürünler**
-* **Hakkımızda**
-* **İletişim**
-
----
-
-## ✨ Özellikler
-
-* Responsive tasarım
-* Modern ve sade kullanıcı arayüzü
-* Responsive navigasyon menüsü
-* Ürün kategorileri
-* Dropdown kategori menüsü
-* Arama alanı
-* Hero alanı
-* Ürün kartları
-* Hakkımızda bölümü
-* İletişim formu
-* Newsletter / bülten alanı
-* Footer alanı
-* Bootstrap Icons kullanımı
-* CSS değişkenleri ile renk yönetimi
-* Flexbox ve CSS Grid kullanımı
+* **Home**
+* **Products**
+* **About Us**
+* **Contact**
 
 ---
 
-## 📁 Proje Klasör Yapısı
+## ✨ Features
+
+* Responsive design
+* Modern and minimalist user interface
+* Responsive navigation menu
+* Product categories
+* Dropdown category menu
+* Search bar
+* Hero section
+* Product cards
+* About Us section
+* Contact form
+* Newsletter section
+* Footer section
+* Bootstrap Icons
+* CSS variables for color management
+* Flexbox and CSS Grid layouts
+
+---
+
+## 📁 Project Structure
 
 ```text
 saat-kulesi-pili/
@@ -104,42 +104,44 @@ saat-kulesi-pili/
 
 ---
 
-## 🚀 Projeyi Çalıştırma
+## 🚀 How to Run the Project
 
-Projeyi bilgisayarınıza indirdikten sonra `index.html` dosyasını tarayıcıda açabilirsiniz.
+After downloading or cloning the repository, open the project folder in VS Code.
 
-Daha rahat bir geliştirme deneyimi için **VS Code Live Server** kullanılabilir.
+You can open the `index.html` file directly in your browser.
 
-### Live Server ile
+For a better development experience, **Live Server** can be used.
 
-1. Projeyi VS Code ile açın.
-2. `index.html` dosyasını açın.
-3. Sağ tıklayın.
-4. **Open with Live Server** seçeneğine tıklayın.
-5. Proje tarayıcıda açılacaktır.
+### Using Live Server
+
+1. Open the project in VS Code.
+2. Open `index.html`.
+3. Right-click on the file.
+4. Select **Open with Live Server**.
+5. The website will open in your browser.
 
 ---
 
-## 🖥️ Responsive Tasarım
+## 🖥️ Responsive Design
 
-Site farklı ekran boyutlarına uyum sağlayacak şekilde tasarlanmıştır.
+The website is designed to adapt to different screen sizes.
 
-Desteklenen ekranlar:
+Supported devices include:
 
-* 💻 Masaüstü
+* 💻 Desktop
 * 💻 Laptop
-* 📱 Mobil
 * 📱 Tablet
+* 📱 Mobile
 
 ---
 
-## 🎨 Tasarım
+## 🎨 Design
 
-Projede sade ve modern bir renk paleti kullanılmıştır.
+The project uses a clean and minimalist color palette.
 
-Ana renkler CSS değişkenleri üzerinden yönetilmektedir.
+Colors are managed using CSS variables, making it easier to update the website's color scheme from a single location.
 
-Örneğin:
+For example:
 
 ```css
 :root {
@@ -150,86 +152,82 @@ Ana renkler CSS değişkenleri üzerinden yönetilmektedir.
 }
 ```
 
-Bu yapı sayesinde sitenin renklerini tek bir yerden değiştirmek mümkündür.
-
 ---
 
-## 📸 Ekran Görüntüsü
+## 📸 Screenshots
 
-Projenin ekran görüntüsü aşağıda yer almaktadır.
+A screenshot of the project can be added here.
 
-> Buraya daha sonra projenin ekran görüntüsü eklenebilir.
-
-Örneğin:
+For example:
 
 ```markdown
-![Saat Kulesi Pili Ana Sayfa](img/screenshot.png)
+![Saat Kulesi Pili Homepage](img/screenshot.png)
 ```
 
 ---
 
-## 📝 Hatalar ve Geliştirmeler
+## 📝 Errors and Improvements
 
-Projede karşılaşılan hatalar ve yapılan düzeltmeler `HATALAR.md` dosyasında açıklanmıştır.
+Errors encountered during the development process and their solutions are documented in the `HATALAR.md` file.
+
+You can find the details here:
 
 [HATALAR.md](HATALAR.md)
 
-Bu dosyada:
+The file includes:
 
-* Hatanın ne olduğu
-* Nerede bulunduğu
-* Neden oluştuğu
-* Nasıl düzeltildiği
-
-belirtilmektedir.
+* What the error was
+* Where it was found
+* Why it occurred
+* How it was fixed
 
 ---
 
-## 📚 Öğrenme Süreci
+## 📚 Learning Process
 
-Bu proje geliştirilirken özellikle aşağıdaki konularda pratik yapılmıştır:
+This project provided an opportunity to practice the following topics:
 
-* HTML semantik etiketleri
-* Form yapıları
+* HTML semantic elements
+* HTML forms
 * CSS selectors
 * CSS variables
 * Flexbox
 * CSS Grid
 * Responsive design
 * Media queries
-* BEM metodolojisi
+* BEM methodology
 * Pseudo-elements (`::before`, `::after`)
 * Bootstrap
 * Bootstrap Icons
-* Git ve GitHub
+* Git and GitHub
 
 ---
 
-## 🔮 Gelecekte Yapılabilecek Geliştirmeler
+## 🔮 Future Improvements
 
-Projeye ilerleyen aşamalarda aşağıdaki özelliklerin eklenmesi planlanmaktadır:
+The following features may be added in future versions:
 
-* JavaScript ile dinamik ürün filtreleme
-* Sepet sistemi
-* Ürün detay sayfaları
-* Favoriler sistemi
-* Gerçek arama özelliği
-* Form doğrulama
-* Kullanıcı giriş sistemi
-* Backend bağlantısı
-* Veritabanı entegrasyonu
-* Online ödeme sistemi
+* Dynamic product filtering with JavaScript
+* Shopping cart functionality
+* Product detail pages
+* Favorites / wishlist functionality
+* Functional search
+* Form validation
+* User authentication
+* Backend integration
+* Database integration
+* Online payment system
 
 ---
 
-## 👨‍💻 Geliştirici
+## 👨‍💻 Developer
 
 **Hakan**
 
-Bu proje frontend geliştirme öğrenme sürecinin bir parçası olarak geliştirilmiştir.
+This project was developed as part of my frontend development learning journey.
 
 ---
 
-## 📄 Lisans
+## 📄 License
 
-Bu proje eğitim ve kişisel geliştirme amacıyla hazırlanmıştır.
+This project was created for educational and personal development purposes.
