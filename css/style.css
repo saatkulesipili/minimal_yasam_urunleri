@@ -122,7 +122,7 @@ img { max-width: 100%; display: block; }
   margin: 0.5rem auto 0; /* üst-sağ/sol-alt kısayolu: ortalamak için auto */
 }
 
-.btn-atolye {
+.btn-saat-kulesi-pili {
   display: inline-block;
   font-family: var(--font-body);
   font-weight: 600;
@@ -134,7 +134,7 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
   transition: transform var(--transition-fast), background var(--transition-fast);
 }
-.btn-atolye:hover {
+.btn-saat-kulesi-pili:hover {
   background: var(--color-accent);
   border-color: var(--color-accent);
   transform: translateY(-2px); /* TRANSFORM: hafif yukarı kalkma efekti */
