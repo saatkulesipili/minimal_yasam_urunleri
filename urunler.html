@@ -15,7 +15,9 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-
+ <!-- ================================================================
+       ÜST BİLGİ ŞERİDİ (Topbar)
+  ================================================================= -->
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="topbar-info">
@@ -34,18 +36,40 @@
   </div>
 
   <header class="site-header">
-    <div class="container navbar-atolye">
-      <a href="index.html" class="brand">🪵 ATÖLYE<span>.</span></a>
+    <div class="container navbar-saatkulesipili">
+      <a href="index.html" class="brand">
+        <img src="img/saat_kulesi_pili.png" alt="Saat Kulesi Pili" />
+        <span>Saat Kulesi Pili</span>
+      </a>
+
       <nav aria-label="Ana menü">
         <ul class="nav-links" id="anaMenu">
-          <li><a href="index.html">Anasayfa</a></li>
+          <li>
+            <a href="index.html">Anasayfa</a>
+          </li>
+          
+          <!-- DROPDOWN MENÜ -->
           <li class="nav-item-dropdown">
-            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Kategoriler <i class="bi bi-chevron-down"></i></button>
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Kategoriler 
+              <i class="bi bi-chevron-down"></i>
+            </button>
             <ul class="dropdown-menu">
-              <li><a href="urunler.html?kategori=seramik">Seramik</a></li>
-              <li><a href="urunler.html?kategori=ahsap">Ahşap Ürünler</a></li>
-              <li><a href="urunler.html?kategori=tekstil">Tekstil &amp; Dokuma</a></li>
-              <li><a href="urunler.html?kategori=mum">El Yapımı Mumlar</a></li>
+              <li>
+                <a href="urunler.html?kategori=defter-ajanda">Defter &amp; Ajanda</a>
+              </li>
+              <li>
+                <a href="urunler.html?kategori=kalemler">Kalemler</a>
+              </li>
+              <li>
+                <a href="urunler.html?kategori=sticker">Sticker</a>
+              </li>
+              <li>
+                <a href="urunler.html?kategori=kalem-kutulari-cantalar">Kalem Kutuları &amp; Çantalar</a>
+              </li>
+              <li>
+                <a href="urunler.html">Tüm Kategoriler →</a>
+              </li>
             </ul>
           </li>
           <li><a href="urunler.html" aria-current="page">Ürünler</a></li>
@@ -53,13 +77,21 @@
           <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </nav>
+
+      <!-- ARAMA KUTUSU -->
+
       <form class="navbar-search" role="search">
         <label for="navSearch" class="visually-hidden">Ürün ara</label>
-        <input type="search" id="navSearch" placeholder="Ürün, kategori veya usta ara...">
-        <button type="submit" aria-label="Ara"><i class="bi bi-search"></i></button>
+        <input type="search" id="navSearch" placeholder="Ürün, kategori veya kategori ara...">
+        <button type="submit" aria-label="Ara">
+          <i class="bi bi-search"></i>
+        </button>
       </form>
+
       <div class="navbar-actions">
-        <a href="#" class="icon-btn" aria-label="Favorilerim"><i class="bi bi-heart"></i></a>
+        <a href="#" class="icon-btn" aria-label="Favorilerim">
+          <i class="bi bi-heart"></i>
+        </a>
         <a href="sepet.html" class="icon-btn" aria-label="Sepetim">
           <i class="bi bi-bag"></i>
           <span class="icon-badge" data-cart-count>0</span>
