@@ -11,7 +11,7 @@
    768px  -> tablet (dikey)
    576px  -> mobil telefon
    ===================================================================== */
-
+/*? 758x1138 genişliklerde (breakpoint) navbar'ın hamburger menüye dönüştüğüşüyor.
 /* ---------- 1200px ve altı: geniş ekran ince ayar ---------- */
 @media (max-width: 1200px) {
   .category-grid { grid-template-columns: repeat(3, 1fr); }
