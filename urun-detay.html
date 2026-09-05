@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Toprak Tonu Kase Seti - El yapımı seramik kase, Anadolu ustalarının elinden.">
-  <title>Toprak Tonu Kase Seti | ATÖLYE</title>
+  <title>Minimal çizgili defter | SAAT KULESİ PİLİ</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -16,32 +16,67 @@
 </head>
 <body>
 
-  <div class="topbar">
+ <div class="topbar">
     <div class="container topbar-inner">
-      <div class="topbar-info"><span><i class="bi bi-telephone"></i> 0850 123 45 67</span></div>
-      <div class="topbar-social"><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></div>
+      <div class="topbar-info">
+        <!-- <span><i class="bi bi-telephone"></i> 0212 123 45 67</span> -->
+        <a href="tel:02121234567"><i class="bi bi-telephone"></i>0212 123 45 67</a>
+        <!-- <a href="mailto:info@saatkulesipili.com"><i class="bi bi-envelope"></i>info@saatkulesipili.com</a> -->
+        <span><i class="bi bi-truck"></i> 500₺ üzeri kargo bedava</span>
+      </div>
+      <div class="topbar-social">
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+        <a href="#" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+      </div>
     </div>
   </div>
 
   <header class="site-header">
-    <div class="container navbar-atolye">
-      <a href="index.html" class="brand">🪵 ATÖLYE<span>.</span></a>
+    <div class="container navbar-saatkulesipili">
+      <a href="index.html" class="brand">
+        <img src="img/saat_kulesi_pili.png" alt="Saat Kulesi Pili" />
+        <span>Saat Kulesi Pili</span>
+      </a>
+
       <nav aria-label="Ana menü">
         <ul class="nav-links" id="anaMenu">
-          <li><a href="index.html">Anasayfa</a></li>
+          <li>
+            <a href="index.html">Anasayfa</a>
+          </li>
+          <!-- DROPDOWN MENÜ -->
+
           <li class="nav-item-dropdown">
-            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Kategoriler <i class="bi bi-chevron-down"></i></button>
-            <ul class="dropdown-menu">
-              <li><a href="urunler.html?kategori=seramik">Seramik</a></li>
-              <li><a href="urunler.html?kategori=ahsap">Ahşap Ürünler</a></li>
-              <li><a href="urunler.html?kategori=tekstil">Tekstil &amp; Dokuma</a></li>
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Kategoriler
+              <i class="bi bi-chevron-down"></i>
+            </button>
+             <ul class="dropdown-menu">
+              <li>
+                <a href="urunler.html?kategori=defter-ajanda">Defter &amp; Ajanda</a>
+              </li>
+              <li>
+                <a href="urunler.html?kategori=kalemler">Kalemler</a>
+              </li>
+              <li>
+                <a href="urunler.html?kategori=sticker">Sticker</a>
+              </li>
+              <li>
+                <a href="urunler.html?kategori=kalem-kutulari-cantalar">Kalem Kutuları &amp; Çantalar</a>
+              </li>
+              <li>
+                <a href="urunler.html">Tüm Kategoriler →</a>
+              </li>
             </ul>
           </li>
-          <li><a href="urunler.html">Ürünler</a></li>
+          <li><a href="urunler.html" aria-current="page">Ürünler</a></li>
           <li><a href="hakkimizda.html">Hakkımızda</a></li>
           <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </nav>
+      <!-- ARAMA KUTUSU -->
+
       <form class="navbar-search" role="search">
         <label for="navSearch" class="visually-hidden">Ürün ara</label>
         <input type="search" id="navSearch" placeholder="Ürün ara...">

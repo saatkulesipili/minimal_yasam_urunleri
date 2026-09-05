@@ -10,8 +10,9 @@
    992px  -> tablet (yatay) / küçük laptop
    768px  -> tablet (dikey)
    576px  -> mobil telefon
+   400px 400px altı için .hero h1 yazı boyutunu küçült.  -> 
    ===================================================================== */
-/*? 758x1138 genişliklerde (breakpoint) navbar'ın hamburger menüye dönüştüğüşüyor.
+/*? 768x1138 genişliklerde (breakpoint) navbar'ın hamburger menüye dönüşüyor. */
 /* ---------- 1200px ve altı: geniş ekran ince ayar ---------- */
 @media (max-width: 1200px) {
   .category-grid { grid-template-columns: repeat(3, 1fr); }
@@ -74,6 +75,21 @@
   .hero-stats { gap: var(--space-2); }
   .newsletter-form { flex-direction: column; }
   .form-grid-2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 1.8rem;
+    topbar {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* ---------- Erişilebilirlik: hareket azaltmayı tercih edenler ---------- */
