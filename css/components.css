@@ -397,18 +397,3 @@
 }
 
 
-/* ---------------------------------------------------------------------
-   BREADCRUMB (Anasayfa / Ürünler / Sayfa Adı)
---------------------------------------------------------------------- */
-
-breadcrumb-item a {
-  color: var(--color-dark);
-}
-
-breadcrumb-item.active {
-  color: var(--color-dark);
-}
-
-breadcrumb-item a:hover {
-  color: var(--color-accent);
-}

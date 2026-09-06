@@ -46,6 +46,7 @@
   --shadow-card: 0 6px 18px rgba(31, 42, 36, 0.08);
   --transition-fast: 0.2s ease;
   --transition-slow: 0.45s ease;
+  --control-height: 46px;
 }
 
 /* ---------------------------------------------------------------------
